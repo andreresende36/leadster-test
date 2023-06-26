@@ -1,6 +1,8 @@
 import { Inter } from 'next/font/google'
 import Header from '@/components/Header'
 import Banner from '@/components/Banner'
+import Filters from '@/components/Filters'
+import Sorter from '@/components/Sorter'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,10 +12,13 @@ export default function Home() {
       <Header />
       <Banner />
 
-      <section className='h-[1390px] w-[60%] m-auto'>
-        <div className='flex'>
-          <div>Filtros</div>
-          <div>Ordenação</div>
+      <section className='h-[1390px] w-[70%] m-auto'>
+        
+        <div className={`
+          flex justify-around items-center 
+          mt-20 pb-5 border-b-[2.5px] border-[#DCDFE2]`}>
+          <Filters />
+          <Sorter />
         </div>
         
         <div>Cards</div>
