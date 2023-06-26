@@ -3,6 +3,7 @@ import Header from '@/components/Header'
 import Banner from '@/components/Banner'
 import Filters from '@/components/Filters'
 import Sorter from '@/components/Sorter'
+import Videos from '@/components/Videos'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +22,7 @@ export default function Home() {
           <Sorter />
         </div>
         
-        <div>Cards</div>
+        <Videos />
 
         <div>Páginas</div>
       </section>
