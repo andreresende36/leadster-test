@@ -9,7 +9,6 @@ export default function Home() {
     <>
       <Header />
       <Banner />
-      
 
       <section className='h-[1390px] w-[60%] m-auto'>
         <div className='flex'>
