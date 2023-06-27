@@ -11,5 +11,8 @@ module.exports = {
       serif: ['Georgia', 'serif'],
     }
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ['light'],
+  },
 }

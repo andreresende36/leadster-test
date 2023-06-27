@@ -7,11 +7,13 @@ function Videos({ initialVideos = videoData }: { initialVideos?:  BasicVideoInfo
   const [videos, _setVideos] = useState<BasicVideoInfo[]>(initialVideos);
 
   return (
-    <div className="flex justify-center items-center flex-wrap gap-6 mt-10">
-      {videos.map((video) => (
-        <VideoCard key={video.id} videoInfo={video} />
-      ))}
-    </div>
+    <>
+      <div className="flex justify-center items-center flex-wrap gap-6 mt-10 overflow-scroll">
+        {videos.map((video) => (
+          <VideoCard key={video.id} videoInfo={video} />
+        ))}
+      </div>
+    </>
   );
 }
 

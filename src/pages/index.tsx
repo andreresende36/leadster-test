@@ -4,6 +4,7 @@ import Banner from '@/components/Banner'
 import Filters from '@/components/Filters'
 import Sorter from '@/components/Sorter'
 import Videos from '@/components/Videos'
+import Pagination from '@/components/Pagination'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,7 +14,7 @@ export default function Home() {
       <Header />
       <Banner />
 
-      <section className='h-[1390px] w-[70%] m-auto'>
+      <section className='h-[1390px] w-[70%] m-auto flex flex-col'>
         
         <div className={`
           flex justify-around items-center 
@@ -23,8 +24,9 @@ export default function Home() {
         </div>
         
         <Videos />
+        
 
-        <div>Páginas</div>
+        <Pagination />
       </section>
 
       <section className='bg-[#F0F8FF] h-[735px] w-[100%]'>
