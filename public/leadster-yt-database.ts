@@ -1,4 +1,6 @@
-[
+import { VideoInfo } from "@/types/videoInfo"
+
+const videos: VideoInfo[] = [
   {
     "kind": "youtube#searchResult",
     "etag": "TVBiMO2puQhRw7CI07HyAHa0ej4",
@@ -1400,3 +1402,5 @@
     }
   }
 ]
+
+export default videos;

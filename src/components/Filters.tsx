@@ -1,5 +1,5 @@
 import FilterButton from './FilterButton';
-import videoData from "../../public/leadster-yt-database.json";
+import videoData from "../../public/leadster-yt-database";
 import { useEffect, useState } from "react";
 import { Filters } from "@/types/filterTypes";
 

@@ -6,7 +6,8 @@ export type VideoInfo =
     etag: string,
     id: {
       kind: string,
-      videoId: string
+      videoId?: string,
+      playlistId?: string
     },
     snippet: {
       publishedAt: string,
