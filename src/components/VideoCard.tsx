@@ -23,11 +23,11 @@ function VideoCard({ videoInfo: { title, thumbnail: { url, height }, id } }: { v
       {/* Icon Play */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          fill="rgb(255,255,255)"
+          fill="rgb(245,245,245)"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="absolute w-[70px] h-[70px] text-white opacity-0 group-hover:opacity-100 group-hover:drop-shadow-md z-20 mx-[9.2rem] my-[4.3rem]"
+          className="absolute w-[70px] h-[70px] text-[#f5f5f5] opacity-0 hover:fill-white hover:text-white hover:drop-shadow-xl group-hover:opacity-100 group-hover:drop-shadow-md z-20 mx-[9.2rem] my-[4.3rem]"
         >
           <path
             strokeLinecap="round"
