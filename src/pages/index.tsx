@@ -5,7 +5,7 @@ import Filters from '@/components/Filters'
 import Sorter from '@/components/Sorter'
 import Videos from '@/components/Videos'
 import Pagination from '@/components/Pagination'
-
+import Stats from '@/components/Stats'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -24,15 +24,11 @@ export default function Home() {
         </div>
         
         <Videos />
-        
 
         <Pagination />
       </section>
 
-      <section className='bg-[#F0F8FF] h-[735px] w-[100%]'>
-        <div>Stats1</div>
-        <div>Stats2</div>
-      </section>
+      <Stats />
 
       <footer className='h-[585px] w-[100%]'>
         <div>
