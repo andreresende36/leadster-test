@@ -1,6 +1,6 @@
-import { filters } from "./filterTypes"
+import { Filters } from "./filterTypes"
 
-export type videoInfo = 
+export type VideoInfo = 
   {
     kind: string,
     etag: string,
@@ -33,6 +33,6 @@ export type videoInfo =
       channelTitle: string,
       liveBroadcastContent: string,
       publishTime: string,
-      category: filters
+      category: Filters
     }
   }

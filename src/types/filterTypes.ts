@@ -1,8 +1,8 @@
-type filters = 'Agências' | 'Chatbot' | 'Marketing Digital' | 'Geração de Leads' | 'Mídia Paga' | '';
+type Filters = 'Agências' | 'Chatbot' | 'Marketing Digital' | 'Geração de Leads' | 'Mídia Paga' | '';
 
-type propsFilterButton = {
-  text: filters,
-  key: filters,
+type PropsFilterButton = {
+  text: Filters,
+  key: Filters,
 }
 
-export type { filters, propsFilterButton }
+export type { Filters, PropsFilterButton }

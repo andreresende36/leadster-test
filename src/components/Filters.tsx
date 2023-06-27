@@ -1,17 +1,17 @@
 import FilterButton from './FilterButton';
 import videoData from "../../public/leadster-yt-database.json";
 import { useEffect, useState } from "react";
-import { filters } from "@/types/filterTypes";
+import { Filters } from "@/types/filterTypes";
 
 function Filters() {
 
-  const [categories, setCategories] = useState<filters[]>([]);
-  const [selection, setSelection] = useState<filters>('');
+  const [categories, setCategories] = useState<Filters[]>([]);
+  const [selection, setSelection] = useState<Filters>('');
 
   useEffect(() => {
     const set = new Set();
     videoData.forEach((video) => set.add(video.snippet.category));
-    setCategories(Array.from(set).sort() as filters[]);
+    setCategories(Array.from(set).sort() as Filters[]);
   }, []);
   return (
     <div className='w-[70%] flex gap-5'>

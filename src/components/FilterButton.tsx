@@ -1,6 +1,6 @@
-import { propsFilterButton } from "@/types/filterTypes";
+import { PropsFilterButton } from "@/types/filterTypes";
 
-function FilterButton(props: propsFilterButton) {
+function FilterButton(props: PropsFilterButton) {
   return <button 
     className={`
       border-[1.5px] border-[#21465e] hover:border-[#007EFF] rounded-full
