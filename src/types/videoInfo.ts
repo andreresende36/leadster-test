@@ -1,13 +1,12 @@
 import { Filters } from "./filterTypes"
 
-export type VideoInfo = 
+type FullVideoInfo = 
   {
     kind: string,
     etag: string,
     id: {
       kind: string,
-      videoId?: string,
-      playlistId?: string
+      videoId: string,
     },
     snippet: {
       publishedAt: string,
@@ -37,3 +36,18 @@ export type VideoInfo =
       category: Filters
     }
   }
+
+  type BasicVideoInfo = {
+    id: string,
+    title: string,
+    description: string,
+    thumbnail: {
+      url: string,
+      width: number,
+      height: number,
+    },
+    category: Filters,
+    publishedAt: string,
+  }
+
+  export type { FullVideoInfo, BasicVideoInfo }

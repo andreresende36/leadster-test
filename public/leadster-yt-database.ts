@@ -1,6 +1,6 @@
-import { VideoInfo } from "@/types/videoInfo"
+import { FullVideoInfo, BasicVideoInfo } from "@/types/videoInfo"
 
-const videos: VideoInfo[] = [
+const videos: FullVideoInfo[] = [
   {
     "kind": "youtube#searchResult",
     "etag": "TVBiMO2puQhRw7CI07HyAHa0ej4",
@@ -69,76 +69,6 @@ const videos: VideoInfo[] = [
       "liveBroadcastContent": "none",
       "publishTime": "2023-03-24T10:15:02Z",
       "category": "Mídia Paga"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "gL7CZXi7bXIolMqafo0LfRPPdbg",
-    "id": {
-      "kind": "youtube#playlist",
-      "playlistId": "PL_dirAhLkFrtHAc0agF5ejKWVSGnOw7vV"
-    },
-    "snippet": {
-      "publishedAt": "2023-03-17T20:42:14Z",
-      "channelId": "UCrydTYsZKHPE_pe9NNLMeDA",
-      "title": "O Futuro do Marketing: 3 Tendências que vão Mudar (Quase) Tudo que Sabemos sobre Marketing Digital",
-      "description": "",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/sgddXeJfR64/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/sgddXeJfR64/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/sgddXeJfR64/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
-      },
-      "channelTitle": "Leadster - Marketing Conversacional",
-      "liveBroadcastContent": "none",
-      "publishTime": "2023-03-17T20:42:14Z",
-      "category": "Marketing Digital"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "gw-3_eOzAis6e-9mhI19Qs9vTME",
-    "id": {
-      "kind": "youtube#playlist",
-      "playlistId": "PL_dirAhLkFrvB5KbzDA0wPqXiUhlehTRF"
-    },
-    "snippet": {
-      "publishedAt": "2023-01-25T22:10:12Z",
-      "channelId": "UCrydTYsZKHPE_pe9NNLMeDA",
-      "title": "Os passos do Marketing Digital para Startups",
-      "description": "",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/EW6QAM4ypVE/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/EW6QAM4ypVE/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/EW6QAM4ypVE/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
-      },
-      "channelTitle": "Leadster - Marketing Conversacional",
-      "liveBroadcastContent": "none",
-      "publishTime": "2023-01-25T22:10:12Z",
-      "category": "Marketing Digital"
     }
   },
   {
@@ -244,76 +174,6 @@ const videos: VideoInfo[] = [
       "liveBroadcastContent": "none",
       "publishTime": "2023-03-02T10:00:25Z",
       "category": "Marketing Digital"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "LqzkzdEcDOlU_aA6hz_UQ7_H05w",
-    "id": {
-      "kind": "youtube#playlist",
-      "playlistId": "PL_dirAhLkFrvxKRfOP6WN2DQrFKmoI3l6"
-    },
-    "snippet": {
-      "publishedAt": "2023-01-25T19:42:11Z",
-      "channelId": "UCrydTYsZKHPE_pe9NNLMeDA",
-      "title": "Mídia Paga - Como Aumentar a Geração de Leads com Mídia Paga",
-      "description": "",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/KiLNo90ajxM/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/KiLNo90ajxM/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/KiLNo90ajxM/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
-      },
-      "channelTitle": "Leadster - Marketing Conversacional",
-      "liveBroadcastContent": "none",
-      "publishTime": "2023-01-25T19:42:11Z",
-      "category": "Mídia Paga"
-    }
-  },
-  {
-    "kind": "youtube#searchResult",
-    "etag": "OvuUgFAvvn--T0cnjypL2Q3sAuc",
-    "id": {
-      "kind": "youtube#playlist",
-      "playlistId": "PL_dirAhLkFrsbIVmJoTx4DoAE4OkSNa8F"
-    },
-    "snippet": {
-      "publishedAt": "2023-01-25T20:44:16Z",
-      "channelId": "UCrydTYsZKHPE_pe9NNLMeDA",
-      "title": "Captação de Leads e Atendimento - Como superar os desafios no digital",
-      "description": "",
-      "thumbnails": {
-        "default": {
-          "url": "https://i.ytimg.com/vi/SNqC88vk2bg/default.jpg",
-          "width": 120,
-          "height": 90
-        },
-        "medium": {
-          "url": "https://i.ytimg.com/vi/SNqC88vk2bg/mqdefault.jpg",
-          "width": 320,
-          "height": 180
-        },
-        "high": {
-          "url": "https://i.ytimg.com/vi/SNqC88vk2bg/hqdefault.jpg",
-          "width": 480,
-          "height": 360
-        }
-      },
-      "channelTitle": "Leadster - Marketing Conversacional",
-      "liveBroadcastContent": "none",
-      "publishTime": "2023-01-25T20:44:16Z",
-      "category": "Agências"
     }
   },
   {
@@ -1403,4 +1263,18 @@ const videos: VideoInfo[] = [
   }
 ]
 
-export default videos;
+const extractMainData = (videosFullData: FullVideoInfo[]): BasicVideoInfo[] => {
+  const extractedData = videosFullData.map((video) => {
+    return {
+      id: video.id.videoId,
+      title: video.snippet.title,
+      description: video.snippet.description,
+      thumbnail: video.snippet.thumbnails.medium,
+      category: video.snippet.category,
+      publishedAt: video.snippet.publishedAt,
+    }
+  });
+  return extractedData;
+}
+
+export default extractMainData(videos);

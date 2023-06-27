@@ -1,13 +1,13 @@
 import Image from "next/image";
 import * as he from "he";
-import { VideoInfo } from "@/types/videoInfo";
+import { BasicVideoInfo } from "@/types/videoInfo";
 
 /**
  * Renders a video card component.
  * @param props An object containing the video information.
  * @returns A JSX element representing the video card.
  */
-function VideoCard({ videoInfo }: { videoInfo: VideoInfo }): JSX.Element {
+function VideoCard({ videoInfo: { title, thumbnail: { url, height }, id } }: { videoInfo: BasicVideoInfo }): JSX.Element {
   return (
     <button
       className="group relative w-[365px] h-[290px] rounded-xl shadow-xl transition duration-400 hover:text-[#007EFF] ease-in-out hover:scale-[1.007]" >
@@ -38,18 +38,18 @@ function VideoCard({ videoInfo }: { videoInfo: VideoInfo }): JSX.Element {
 
       {/* Thumbnail */}
       <Image
-        src={videoInfo.snippet.thumbnails.medium.url}
-        alt={videoInfo.snippet.title}
+        src={url}
+        alt={title}
         width={365}
-        height={180}
-        key={videoInfo.id.videoId}
+        height={height}
+        key={id}
         className="rounded-t-xl h-[200px] z-0"
       />
 
       {/* Title */}
       <div className="flex justify-center items-center p-6">
         <p className="break-words font-extrabold text-[0.90rem] text-justify leading-tight z-0">
-          {he.decode(videoInfo.snippet.title)}
+          {he.decode(title)}
         </p>
       </div>
     </button>

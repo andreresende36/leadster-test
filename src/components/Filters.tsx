@@ -10,7 +10,7 @@ function Filters() {
 
   useEffect(() => {
     const set = new Set();
-    videoData.forEach((video) => set.add(video.snippet.category));
+    videoData.forEach((video) => set.add(video.category));
     setCategories(Array.from(set).sort() as Filters[]);
   }, []);
   return (
