@@ -1,7 +1,8 @@
 import { useFilterContext } from "@/context/FilterContext";
 import { useEffect, useState } from "react";
+import { Filters } from "@/types/filterTypes";
 
-function FilterButton({ text }: { text: string }) {
+function FilterButton({ text }: { text: Filters }) {
   const { selectedFilter, setSelectedFilter } = useFilterContext();
   const [active, setActive] = useState(false);
 
