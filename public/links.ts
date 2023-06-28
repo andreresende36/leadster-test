@@ -1,5 +1,5 @@
 export const links = {
-  home: 'https://leadster.com.br/',
+  home: '/',
   ferramenta: 'https://leadster.com.br/leads-qualificados-com-anuncios/',
   preco: 'https://leadster.com.br/preco/',
   contato: 'https://leadster.com.br/contato/',

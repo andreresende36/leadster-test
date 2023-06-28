@@ -33,15 +33,17 @@ function Footer() {
       `}
     >
       <div className="w-full flex flex-col items-center justify-center">
-        <Image
-          src="/../public/leadster_270.gif"
-          alt="Leadster Logo"
-          width={194}
-          height={42}
-        />
-        <span className="text-[0.7rem] pt-1 text-[#15364aa8]">
-          Transformando visitantes em clientes.
-        </span>
+        <Link href={home}>
+          <Image
+            src="/../public/leadster_270.gif"
+            alt="Leadster Logo"
+            width={194}
+            height={42}
+          />
+          <span className="text-[0.7rem] pt-1 text-[#15364aa8]">
+            Transformando visitantes em clientes.
+          </span>
+        </Link>
       </div>
       <div className="flex w-[70%] justify-between">
         <div className="flex flex-col gap-3">
