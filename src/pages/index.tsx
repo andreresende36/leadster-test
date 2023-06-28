@@ -6,6 +6,7 @@ import Sorter from '@/components/Sorter'
 import Videos from '@/components/Videos'
 import Pagination from '@/components/Pagination'
 import Stats from '@/components/Stats'
+import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -29,23 +30,7 @@ export default function Home() {
       </section>
 
       <Stats />
-
-      <footer className='h-[585px] w-[100%]'>
-        <div>
-          <div>Logo</div>
-          <div>Texto</div>
-        </div>
-        <div>
-          <div>Coluna1</div>
-          <div>Coluna2</div>
-          <div>Coluna3</div>
-          <div>Coluna4</div>
-        </div>
-        <div>
-          <span>Copyright</span>
-          <span>Endereço</span>
-        </div>
-      </footer>
+      <Footer />
     </>
   )
 }
