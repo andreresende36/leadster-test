@@ -12,7 +12,7 @@ import { useState } from "react";
 
 function VideosSection() {
   const { videos, setVideos } = useVideoContext();
-  const [videosPerPage, setVideosPerPage] = useState(9);
+  const [videosPerPage, setVideosPerPage] = useState(12);
   const totalPages = Math.ceil(videos.length / videosPerPage);  
 
   
@@ -46,7 +46,7 @@ function VideosSection() {
   };
 
   return (
-    <section className="h-fit w-[70%] m-auto flex flex-col">
+    <section className="h-fit w-[80%] m-auto flex flex-col">
       <div
         className={`
             flex justify-around items-center 

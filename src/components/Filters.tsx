@@ -6,7 +6,6 @@ import { Filters } from "@/types/filterTypes";
 function Filters() {
 
   const [categories, setCategories] = useState<Filters[]>([]);
-  const [selection, setSelection] = useState<Filters>('');
 
   useEffect(() => {
     const set = new Set();
@@ -14,7 +13,7 @@ function Filters() {
     setCategories(Array.from(set).sort() as Filters[]);
   }, []);
   return (
-    <div className='w-[70%] flex gap-5'>
+    <div className='w-[70%] flex gap-5 flex-wrap'>
       {categories.map((category) => (
         <FilterButton text={category} key={category} />
       ))}

@@ -29,7 +29,7 @@ body {
 .swiper-slide {
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin: 1rem 0 0 0;
 }
@@ -45,5 +45,3 @@ body {
 .swiper-pagination-bullet-active {
   @apply border-[3px] hover:border-[3px] border-[#0875FF] text-[#0875FF] font-bold bg-[#e6f2ff] hover:bg-[#e6f2ff]
 }
-
-
