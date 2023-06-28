@@ -31,21 +31,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1rem 0 0 0;
+}
+
+.swiper-pagination {
+  @apply flex justify-center items-center p-6
 }
 
 .swiper-pagination-bullet {
-  text-align: center;
-  line-height: 20px;
-  font-size: 48px;
-  color: #000;
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
-  @apply rounded-full px-10
+  @apply btn text-lg w-9 min-h-0 h-9 rounded-md border-[1.5px] font-semibold bg-transparent hover:border-[1.5px] hover:border-[#0875FF] hover:text-[#0875FF] hover:font-bold hover:bg-[#f9fcff] border-transparent m-1
 }
 
 .swiper-pagination-bullet-active {
-  color: #fff;
-  background: #007aff;
+  @apply border-[3px] hover:border-[3px] border-[#0875FF] text-[#0875FF] font-bold bg-[#e6f2ff] hover:bg-[#e6f2ff]
 }
 
 

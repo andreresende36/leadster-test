@@ -12,7 +12,7 @@ function Footer() {
     >
       <div className="w-full flex flex-col items-center justify-center">
         <Image
-          src="/../public/logo.png"
+          src="/../public/leadster_270.gif"
           alt="Leadster Logo"
           width={194}
           height={42}
