@@ -1259,6 +1259,146 @@ const videos: FullVideoInfo[] = [
       "liveBroadcastContent": "none",
       "publishTime": "2023-03-01T10:00:34Z",
       "category": "Agências"
+    },
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "6J33VIAkDjJMQKacZEdXu1wM8TM",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "kvZxxVLApxw"
+    },
+    "snippet": {
+      "publishedAt": "2021-06-22T18:00:14Z",
+      "channelId": "UCrydTYsZKHPE_pe9NNLMeDA",
+      "title": "Leadster - Triplique sua Geração de Leads com o Marketing Conversacional",
+      "description": "Descubra como a plataforma de Marketing Conversacional da Leadster Aumenta em até 3x sua Geração de Leads Qualificados!",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/kvZxxVLApxw/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/kvZxxVLApxw/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/kvZxxVLApxw/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "Leadster - Marketing Conversacional",
+      "liveBroadcastContent": "none",
+      "publishTime": "2021-06-22T18:00:14Z",
+      "category": "Geração de Leads"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "1oKyKFlnpdCn4DRrT41gKdUvrUY",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "XIBdJjahUkM"
+    },
+    "snippet": {
+      "publishedAt": "2022-09-02T17:40:56Z",
+      "channelId": "UCrydTYsZKHPE_pe9NNLMeDA",
+      "title": "Como Criar um Chatbot Grátis em Menos de 10 Minutos com a Leadster",
+      "description": "Veja como colocar um chatbot de geração de leads em seu site de forma gratuita e em menos de 10 minutos.",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/XIBdJjahUkM/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/XIBdJjahUkM/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/XIBdJjahUkM/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "Leadster - Marketing Conversacional",
+      "liveBroadcastContent": "none",
+      "publishTime": "2022-09-02T17:40:56Z",
+      "category": "Chatbot"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "qRnDRvjWsbSprFv_E3cX7KbQuFM",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "749l4AJrUeQ"
+    },
+    "snippet": {
+      "publishedAt": "2019-11-08T22:14:26Z",
+      "channelId": "UCrydTYsZKHPE_pe9NNLMeDA",
+      "title": "Case de Sucesso: parceria W12 e Leadster",
+      "description": "A Neurologic agora é Leadster! Como a W12 conseguiu aumentar a geração de leads do site em parceria com a Leadster?",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/749l4AJrUeQ/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/749l4AJrUeQ/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/749l4AJrUeQ/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "Leadster - Marketing Conversacional",
+      "liveBroadcastContent": "none",
+      "publishTime": "2019-11-08T22:14:26Z",
+      "category": "Agências"
+    }
+  },
+  {
+    "kind": "youtube#searchResult",
+    "etag": "unodp7vxlQMern07H03VFYx_Bfg",
+    "id": {
+      "kind": "youtube#video",
+      "videoId": "-cqQTHkOnX4"
+    },
+    "snippet": {
+      "publishedAt": "2021-01-18T20:33:34Z",
+      "channelId": "UCrydTYsZKHPE_pe9NNLMeDA",
+      "title": "Tour pela Plataforma da Leadster",
+      "description": "Descubra como utilizar o Marketing Conversacional para aumentar a geração de leads de seu site! Se ainda não criou sua conta, ...",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/-cqQTHkOnX4/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/-cqQTHkOnX4/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/-cqQTHkOnX4/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        }
+      },
+      "channelTitle": "Leadster - Marketing Conversacional",
+      "liveBroadcastContent": "none",
+      "publishTime": "2021-01-18T20:33:34Z",
+      "category": "Geração de Leads"
     }
   }
 ]

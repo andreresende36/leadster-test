@@ -10,7 +10,7 @@ import { BasicVideoInfo } from "@/types/videoInfo";
 function VideoCard({ videoInfo: { title, thumbnail: { url, height }, id } }: { videoInfo: BasicVideoInfo }): JSX.Element {
   return (
     <button
-      className="group relative w-[365px] h-[290px] rounded-xl shadow-xl transition duration-400 hover:text-[#007EFF] ease-in-out hover:scale-[1.007]" >
+      className="group relative w-[365px] h-[290px] rounded-xl shadow-xl transition duration-400 hover:text-[#007EFF] ease-in-out hover:scale-[1.007] m-2" >
       {/* Overlays */}
       <div className="absolute w-full h-full opacity-0 group-hover:opacity-50">
         {/* Overlay Superior */}
