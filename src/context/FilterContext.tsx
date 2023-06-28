@@ -6,10 +6,10 @@ type ContextProps = {
   setSelectedFilter: Dispatch<SetStateAction<Filters>>,
 }
 
-const FilterContext = createContext<ContextProps>({ selectedFilter: '', setSelectedFilter: ():Filters => ''});
+const FilterContext = createContext<ContextProps>({ selectedFilter: 'Todos', setSelectedFilter: ():Filters => 'Todos'});
 
 export const FilterProvider = ({ children }: { children: any }) =>   {
-  const [selectedFilter, setSelectedFilter] = useState('' as Filters);
+  const [selectedFilter, setSelectedFilter] = useState('Todos' as Filters);
   return(
     <FilterContext.Provider value={{ selectedFilter, setSelectedFilter }}>
       {children}

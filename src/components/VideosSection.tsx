@@ -1,42 +1,67 @@
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import { useVideoContext } from "@/context/VideoContext";
 import Filters from "@/components/Filters";
 import Sorter from "@/components/Sorter";
 import VideoCard from "@/components/VideoCard";
+import { useEffect, useState } from "react";
+import { useSortContext } from "@/context/SortContext";
+import { useFilterContext } from "@/context/FilterContext";
 
-// Import Swiper styles
 import "swiper/css";
-import { useState } from "react";
+import { SortTypes } from "@/types/sortTypes";
+import compare from "@/utils/compare";
+import { BasicVideoInfo } from "@/types/videoInfo";
 
 function VideosSection() {
-  const { videos, setVideos } = useVideoContext();
-  const [videosPerPage, setVideosPerPage] = useState(12);
-  const totalPages = Math.ceil(videos.length / videosPerPage);  
+  const { videos } = useVideoContext();
+  const [localVideos, setLocalVideos ] = useState<BasicVideoInfo[]>([]);
+  const { selectedSort } = useSortContext();
+  const { selectedFilter } = useFilterContext();
 
-  
+  const [videosPerPage, _setVideosPerPage] = useState(12);
+  const totalPages = Math.ceil(localVideos.length / videosPerPage);
+
+  useEffect(() => {
+    const filterVideos = (filter: Filters) => {
+      if (filter === "Todos") return videos;
+      return videos.filter((video) => video.category === filter);
+    };
+    const sortVideos = (sort: SortTypes) => {
+      const filteredVideos = filterVideos(selectedFilter);
+      if (sort === "date")
+        return filteredVideos.slice().sort(
+          (a, b) =>
+            new Date(b.publishedAt).getTime() -
+            new Date(a.publishedAt).getTime()
+        );
+      return filteredVideos.slice().sort(compare);
+    };
+    setLocalVideos(sortVideos(selectedSort));
+  }, [videos, localVideos, selectedFilter, selectedSort]);
+
   const distributeVideosByPage = (pageNumber: number) => {
     return (
       <SwiperSlide>
-        {videos.map((video, index) => {
+        {localVideos.map((video, index) => {
           if (
             index >= (pageNumber - 1) * videosPerPage &&
             index <= pageNumber * videosPerPage - 1
-            ) {
-              return <VideoCard videoInfo={video} key={video.id} />;
-            }
-          })}
+          ) {
+            return <VideoCard videoInfo={video} key={video.id} />;
+          }
+        })}
       </SwiperSlide>
     );
   };
-  
+
   const slidesConstructor = (totalPages: number) => {
-    const arrayPages = Array.from({ length: totalPages }, (_, index) => index + 1);
-    console.log(arrayPages);
-    
-    return arrayPages.map((page) => distributeVideosByPage(page))     
-  }
+    const arrayPages = Array.from(
+      { length: totalPages },
+      (_, index) => index + 1
+    );
+    return arrayPages.map((page) => distributeVideosByPage(page));
+  };
 
   const pagination = {
     clickable: true,
