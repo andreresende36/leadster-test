@@ -15,5 +15,8 @@ export const links = {
   telefone: 'https://api.whatsapp.com/send?phone=5542988289851',
   demonstracao: 'https://leadster.com.br/chatbot-leadster/?utm_source=clientes&utm_medium=referral&utm_campaign=leadster.com.br',
   termosDeUso: 'https://leadster.com.br/termos_de_uso/',
-  privacidade: 'https://leadster.com.br/privacidade/'
+  privacidade: 'https://leadster.com.br/privacidade/',
+  linkedin: 'https://www.linkedin.com/company/leadster-platform/',
+  facebook: 'https://web.facebook.com/leadsterplatform',
+  instagram: 'https://www.instagram.com/leadster.com.br/',
 }

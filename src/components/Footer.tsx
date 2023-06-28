@@ -1,7 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
 import * as Icons from "react-icons/fa";
+import { links } from "../../public/links";
 function Footer() {
+  const {
+    home,
+    contato,
+    cases,
+    ferramenta,
+    preco,
+    b2b,
+    imobiliaria,
+    software,
+    blog,
+    gratuitos,
+    guia,
+    parceria,
+    email,
+    telefone,
+    termosDeUso,
+    privacidade,
+    linkedin,
+    facebook,
+    instagram
+  } = links;
   return (
     <footer
       className={`
@@ -26,94 +48,100 @@ function Footer() {
           <span className="font-extrabold text-[0.95rem] pb-6">
             Links Principais
           </span>
-          <a className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
+          <Link href={home} className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Home
-          </a>
-          <a className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
+          </Link>
+          <Link href={ferramenta} className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Ferramenta
-          </a>
-          <a className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
+          </Link>
+          <Link href={preco} className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Preços
-          </a>
-          <a className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
+          </Link>
+          <Link href={contato} className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Contato
-          </a>
+          </Link>
         </div>
         <div className="flex flex-col gap-3">
           <span className="font-extrabold text-[0.95rem] pb-6">Cases</span>
-          <a className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
+          <Link href={b2b} className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Geração de Leads B2B
-          </a>
-          <a className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
+          </Link>
+          <Link href={software} className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Geração de Leads em Software
-          </a>
-          <a className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
+          </Link>
+          <Link href={imobiliaria} className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Geração de Leads em Imobiliária
-          </a>
-          <a className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
+          </Link>
+          <Link href={cases} className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Cases de Sucesso
-          </a>
+          </Link>
         </div>
         <div className="flex flex-col gap-3">
           <span className="font-extrabold text-[0.95rem] pb-6">Materiais</span>
-          <a className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
+          <Link href={blog} className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Blog
-          </a>
-          <a className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
+          </Link>
+          <Link href={parceria} className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Parceria com Agências
-          </a>
-          <a className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
+          </Link>
+          <Link href={guia} className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Guia Definitivo do Marketing
-          </a>
-          <a className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
+          </Link>
+          <Link href={gratuitos} className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Materiais Gratuitos
-          </a>
+          </Link>
         </div>
         <div className="flex flex-col gap-3">
           <span className="font-extrabold text-[0.95rem] pb-1">
             Siga a Leadster
           </span>
           <div className="flex gap-2">
-            <a className="btn btn-circle border-0 bg-[#F7F8FB] hover:bg-[#e3e4e9] scale-90">
+            <Link target="_blank" href={linkedin} className="btn btn-circle border-0 bg-[#F7F8FB] hover:bg-[#e3e4e9] scale-90">
               <Icons.FaLinkedinIn size={18} color="#7D87A8" />
-            </a>
-            <a className="btn btn-circle border-0 bg-[#F7F8FB] hover:bg-[#e3e4e9] scale-90">
+            </Link>
+            <Link target="_blank" href={facebook} className="btn btn-circle border-0 bg-[#F7F8FB] hover:bg-[#e3e4e9] scale-90">
               <Icons.FaFacebookF size={18} color="#7D87A8" />
-            </a>
-            <a className="btn btn-circle border-0 bg-[#F7F8FB] hover:bg-[#e3e4e9] scale-90">
+            </Link>
+            <Link target="_blank" href={instagram} className="btn btn-circle border-0 bg-[#F7F8FB] hover:bg-[#e3e4e9] scale-90">
               <Icons.FaInstagram size={18} color="#7D87A8" />
-            </a>
+            </Link>
           </div>
-          <a className="group text-[#15364aa8] text-sm font-medium link no-underline transition duration-200">
-            <span className="font-extrabold">Email: </span>
-            <span className="group-hover:text-[#15364a]">
+          <div className="text-[#15364aa8] text-sm font-medium">
+            <span>
               contato@leadster.com.br
             </span>
-          </a>
-          <a className="group text-[#15364aa8] text-sm font-medium link no-underline transition duration-200">
+          </div>
+          <Link href={telefone} className="group text-[#15364aa8] text-sm font-medium link no-underline transition duration-200">
             <span className="font-extrabold">Telefone: </span>
             <span className="group-hover:text-[#15364a]">(42) 98828-9851</span>
-          </a>
+          </Link>
         </div>
       </div>
       <div className="w-full gap-16 font-semibold text-xs border-t-2 text-[#15364a80] py-8 mt-12">
-        <div className="w-[70%] flex justify-between m-auto">
+        <div className="w-[80%] flex justify-between m-auto">
           <p>
             Copyright © 2015 - 2022 Todos os direitos reservados |{" "}
             <Link
-              href="http://google.com.br"
+              href={home}
               className="text-[#007EFF] hover:text-[#0077e7]"
             >
               Leadster
             </Link>
           </p>
-          <p>
+          <p className="text-end">
             Rua José Loureiro, 464 - Centro - Curitiba PR - CEP:80010-000 |{" "}
             <Link
-              href="http://google.com.br"
+              href={termosDeUso}
               className="text-[#007EFF] hover:text-[#0077e7]"
             >
               Termos de uso
+            </Link>
+            <span> | </span>
+            <Link
+              href={privacidade}
+              className="text-[#007EFF] hover:text-[#0077e7]"
+            >
+              Privacidade
             </Link>
           </p>
         </div>
