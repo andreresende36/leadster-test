@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import he from "he";
 import { BasicVideoInfo } from "@/types/videoInfo";
@@ -10,11 +9,6 @@ import * as IconsIo from "react-icons/io";
 import Link from "next/link";
 import { links } from "../../public/links";
 
-/**
- * Renders a video card component.
- * @param props An object containing the video information.
- * @returns A JSX element representing the video card.
- */
 function VideoCard({
   videoInfo: {
     id: videoId,
@@ -44,10 +38,10 @@ function VideoCard({
       >
         {/* Overlays */}
         <div className="absolute w-full h-full opacity-0 group-hover:opacity-50">
-          {/* Overlay Superior */}
+          {/* Overlay Top*/}
           <div className="w-full h-[12.41rem] bg-[#007EFF] rounded-t-xl z-10" />
 
-          {/* Overlay Inferior */}
+          {/* Overlay Bottom */}
           <div className="w-full h-[8.1rem] bg-[ #0080ff10] rounded-b-xl z-10" />
         </div>
 
@@ -150,16 +144,16 @@ function VideoCard({
               <div className="w-[93%] flex justify-start gap-2 mb-8 mt-3">
                 {/* Spreadsheet button */}
                 <Link
-                  className='w-[10.8rem] h-[2rem] flex'
+                  className='group w-[10.8rem] h-[2rem] flex'
                   href={links.spreadsheet}
                 >
                   <div
-                    className={`flex justify-center items-center w-[25%] h-full bg-[#9FEFDF] rounded-l-md`}
+                    className={`flex justify-center items-center w-[25%] h-full bg-[#9FEFDF] rounded-l-md group-hover:bg-[#9eecdd]`}
                   >
                     <IconsIo.IoIosCloudDownload size={18} color="#00B489" />
                   </div>
                   <div
-                    className={`flex justify-center items-center w-[75%] h-full bg-[#C2F4EA] rounded-r-md`}
+                    className={`flex justify-center items-center w-[75%] h-full bg-[#C2F4EA] rounded-r-md group-hover:bg-[#bcece2]`}
                   >
                     <p className={`font-bold text-sm text-[#49a794]`}>
                       Spreadsheet.xls
@@ -169,16 +163,16 @@ function VideoCard({
 
                 {/* Document button */}
                 <Link
-                  className='w-[10.8rem] h-[2rem] flex'
+                  className='group w-[10.8rem] h-[2rem] flex'
                   href={links.document}
                 >
                   <div
-                    className={`flex justify-center items-center w-[25%] h-full bg-[#A1D9FF] rounded-l-md`}
+                    className={`flex justify-center items-center w-[25%] h-full bg-[#A1D9FF] rounded-l-md group-hover:bg-[#9cd2f7]`}
                   >
                     <IconsIo.IoIosCloudDownload size={18} color="#1EADF7" />
                   </div>
                   <div
-                    className={`flex justify-center items-center w-[75%] h-full bg-[#C2E6FF] rounded-r-md`}
+                    className={`flex justify-center items-center w-[75%] h-full bg-[#C2E6FF] rounded-r-md group-hover:bg-[#c0e3fa]`}
                   >
                     <p className={`font-bold text-sm text-[#279BF1]`}>
                       Document.doc
@@ -188,16 +182,16 @@ function VideoCard({
 
                 {/* Presentation button */}
                 <Link
-                  className='w-[10.8rem] h-[2rem] flex'
+                  className='group w-[10.8rem] h-[2rem] flex'
                   href={links.presentation}
                 >
                   <div
-                    className={`flex justify-center items-center w-[25%] h-full bg-[#FFF1A0] rounded-l-md`}
+                    className={`flex justify-center items-center w-[25%] h-full bg-[#FFF1A0] rounded-l-md group-hover:bg-[#fceea0]`}
                   >
                     <IconsIo.IoIosCloudDownload size={18} color="#B1982C" />
                   </div>
                   <div
-                    className={`flex justify-center items-center w-[75%] h-full bg-[#FFF8D0] rounded-r-md`}
+                    className={`flex justify-center items-center w-[75%] h-full bg-[#FFF8D0] rounded-r-md group-hover:bg-[#f8f0ca]`}
                   >
                     <p className={`font-bold text-sm text-[#A99445]`}>
                       Presentation.ppt
