@@ -19,7 +19,7 @@ function VideosSection() {
   const { selectedSort } = useSortContext();
   const { selectedFilter } = useFilterContext();
 
-  const [videosPerPage, _setVideosPerPage] = useState<number>(12);
+  const [videosPerPage] = useState<number>(12);
   const totalPages = Math.ceil(localVideos.length / videosPerPage);
 
   useEffect(() => {
