@@ -17,7 +17,7 @@ function Banner(): JSX.Element {
             Mais Conversão
           </span>
           <Image
-            src='/../public/asset-header.png'
+            src='/asset-header.png'
             alt='Ícone leadster'
             width={49}
             height={32}
