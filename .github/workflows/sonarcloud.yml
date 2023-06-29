@@ -7,17 +7,12 @@ on:
       - synchronize
 
 jobs:
-  build:
+  sonarcloud:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up JDK
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'
+        uses: actions/checkout@v3
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v1.9.1
