@@ -1,5 +1,5 @@
 import { SortTypes } from '@/types/sortTypes';
-import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from 'react';
+import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState, useMemo } from 'react';
 
 type ContextProps = {
   selectedSort: SortTypes;
@@ -10,8 +10,9 @@ const SortContext = createContext<ContextProps>({ selectedSort: 'date', setSelec
 
 export const SortProvider = ({ children }: { children: ReactNode }) =>   {
   const [selectedSort, setSelectedSort] = useState('date' as SortTypes);
+  const contextValue = useMemo(() => ({ selectedSort, setSelectedSort }), [selectedSort, setSelectedSort]);
   return(
-    <SortContext.Provider value={{ selectedSort, setSelectedSort }}>
+    <SortContext.Provider value={contextValue}>
       {children}
     </SortContext.Provider>
   )
