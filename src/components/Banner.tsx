@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Banner(): JSX.Element {
   return (
-    <section className='bg-[#F0F8FF] h-[600px] w-[100%] flex justify-center items-center'>
+    <section className='flex bg-[#F0F8FF] h-[600px] w-[100%] justify-center items-center'>
       <div className='flex flex-col items-center'>
         <div className={`uppercase w-[206px] h-[32px] flex justify-center items-center rounded-tl-3xl rounded-bl-lg rounded-r-3xl text-sm font-extrabold text-[#2383fb] border-[#2383fb] border-[0.15rem] mb-4`}>
           Webinars Exclusivos
