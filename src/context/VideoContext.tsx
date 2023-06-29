@@ -1,5 +1,5 @@
 import { BasicVideoInfo } from '@/types/videoInfo';
-import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from 'react';
+import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState, useMemo } from 'react';
 import videoData from "../../public/leadster-yt-database";
 
 type ContextProps = {
@@ -11,8 +11,9 @@ const VideoContext = createContext<ContextProps>({ videos: videoData, setVideos:
 
 export const VideoProvider = ({ children }: { children: ReactNode }) =>   {
   const [videos, setVideos] = useState(videoData);
+  const contextValue = useMemo(() => ({ videos, setVideos }), [videos, setVideos]);
   return(
-    <VideoContext.Provider value={{ videos, setVideos }}>
+    <VideoContext.Provider value={contextValue}>
       {children}
     </VideoContext.Provider>
   )

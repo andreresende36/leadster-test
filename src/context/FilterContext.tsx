@@ -1,5 +1,5 @@
 import { Filters } from '@/types/filterTypes';
-import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from 'react';
+import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState, useMemo } from 'react';
 
 type ContextProps = {
   selectedFilter: Filters;
@@ -10,8 +10,10 @@ const FilterContext = createContext<ContextProps>({ selectedFilter: 'Todos', set
 
 export const FilterProvider = ({ children }: { children: ReactNode }) =>   {
   const [selectedFilter, setSelectedFilter] = useState('Todos' as Filters);
+  const contextValue = useMemo(() => ({ selectedFilter, setSelectedFilter }), [selectedFilter, setSelectedFilter]);
+
   return(
-    <FilterContext.Provider value={{ selectedFilter, setSelectedFilter }}>
+    <FilterContext.Provider value={contextValue}>
       {children}
     </FilterContext.Provider>
   )

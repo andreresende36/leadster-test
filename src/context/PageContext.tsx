@@ -1,4 +1,4 @@
-import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from 'react';
+import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState, useMemo } from 'react';
 
 type ContextProps = {
   selectedPage: number;
@@ -9,8 +9,9 @@ const PageContext = createContext<ContextProps>({ selectedPage: 1, setSelectedPa
 
 export const PageProvider = ({ children }: { children: ReactNode }) =>   {
   const [selectedPage, setSelectedPage] = useState(1);
+  const contextValue = useMemo(() => ({ selectedPage, setSelectedPage }), [selectedPage, setSelectedPage]);
   return(
-    <PageContext.Provider value={{ selectedPage, setSelectedPage }}>
+    <PageContext.Provider value={contextValue}>
       {children}
     </PageContext.Provider>
   )
