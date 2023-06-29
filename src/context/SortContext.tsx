@@ -6,7 +6,7 @@ type ContextProps = {
   setSelectedSort: Dispatch<SetStateAction<SortTypes>>,
 }
 
-const SortContext = createContext<ContextProps>({ selectedSort: 'date', setSelectedSort: ():SortTypes => 'date' || 'title'});
+const SortContext = createContext<ContextProps>({ selectedSort: 'date', setSelectedSort: ():SortTypes => 'date'});
 
 export const SortProvider = ({ children }: { children: ReactNode }) =>   {
   const [selectedSort, setSelectedSort] = useState('date' as SortTypes);
