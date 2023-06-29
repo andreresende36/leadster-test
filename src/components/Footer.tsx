@@ -16,7 +16,6 @@ function Footer() {
     gratuitos,
     guia,
     parceria,
-    email,
     telefone,
     termosDeUso,
     privacidade,

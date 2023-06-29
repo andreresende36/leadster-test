@@ -11,7 +11,6 @@ export const links = {
   parceria: 'https://leadster.com.br/agencias-parceiras/programa/',
   guia: 'https://leadster.com.br/marketing-conversacional/',
   gratuitos: 'https://leadster.com.br/materiais/',
-  email: 'mailto:contato@leadster.com.br',
   telefone: 'https://api.whatsapp.com/send?phone=5542988289851',
   demonstracao: 'https://leadster.com.br/chatbot-leadster/?utm_source=clientes&utm_medium=referral&utm_campaign=leadster.com.br',
   termosDeUso: 'https://leadster.com.br/termos_de_uso/',
