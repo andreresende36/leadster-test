@@ -71,7 +71,7 @@ function VideoCard({
         <Image
           src={url}
           alt={title}
-          width={365}
+          width={width * 1.2}
           height={height}
           key={videoId}
           className="rounded-t-xl h-[12.5rem] z-0"
