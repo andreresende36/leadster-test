@@ -19,7 +19,7 @@ function VideosSection() {
   const { selectedSort } = useSortContext();
   const { selectedFilter } = useFilterContext();
 
-  const [videosPerPage, setVideosPerPage] = useState(12);
+  const [videosPerPage, _setVideosPerPage] = useState<number>(12);
   const totalPages = Math.ceil(localVideos.length / videosPerPage);
 
   useEffect(() => {
@@ -27,6 +27,7 @@ function VideosSection() {
       if (filter === "Todos") return videos;
       return videos.filter((video) => video.category === filter);
     };
+
     const sortVideos = (sort: SortTypes) => {
       const filteredVideos = filterVideos(selectedFilter);
       if (sort === "date") {
@@ -38,7 +39,9 @@ function VideosSection() {
       }
       return filteredVideos.slice().sort(compare);
     };
-    setLocalVideos(sortVideos(selectedSort));
+
+    const sortedVideos = sortVideos(selectedSort);
+    setLocalVideos(sortedVideos);
   }, [videos, selectedFilter, selectedSort]);
 
   const distributeVideosByPage = (pageNumber: number) => {
@@ -53,12 +56,9 @@ function VideosSection() {
     );
   };
 
-  const slidesConstructor = (totalPages: number) => {
-    const arrayPages = Array.from(
-      { length: totalPages },
-      (_, index) => index + 1
-    );
-    return arrayPages.map((page) => distributeVideosByPage(page));
+  const generateSlides = (totalPages: number) => {
+    const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
+    return pageNumbers.map((pageNumber) => distributeVideosByPage(pageNumber));
   };
 
   const pagination = {
@@ -75,7 +75,7 @@ function VideosSection() {
         <Sorter />
       </div>
       <Swiper pagination={pagination} modules={[Pagination]} className="mySwiper">
-        {slidesConstructor(totalPages)}
+        {generateSlides(totalPages)}
       </Swiper>
     </section>
   );
