@@ -8,7 +8,7 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -19,4 +19,29 @@
 body {
   color: var(--foreground-rgb);
   background: var(--background-end-rgb);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem 0 0 0;
+}
+
+.swiper-pagination {
+  @apply flex justify-center items-center p-6
+}
+
+.swiper-pagination-bullet {
+  @apply btn text-xl w-10 min-h-0 h-10 rounded-md border-[1.5px] font-semibold bg-transparent hover:border-[1.5px] hover:border-[#0875FF] hover:text-[#0875FF] hover:font-bold hover:bg-[#f9fcff] border-transparent m-1
+}
+
+.swiper-pagination-bullet-active {
+  @apply border-[3px] hover:border-[3px] border-[#0875FF] text-[#0875FF] font-bold bg-[#e6f2ff] hover:bg-[#e6f2ff]
 }
