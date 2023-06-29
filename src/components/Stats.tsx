@@ -42,7 +42,7 @@ function Stats() {
 
         <div className="w-full flex items-center mt-2 gap-1 text-[0.8rem] max-h-5">
           <Image
-            src="/../public/card.webp"
+            src="/card.webp"
             alt="Cartão de crédito"
             width={16}
             height={16}
