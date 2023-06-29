@@ -10,8 +10,8 @@ import { useFilterContext } from "@/context/FilterContext";
 
 import "swiper/css";
 import { SortTypes } from "@/types/sortTypes";
-import compare from "@/utils/compare";
 import { BasicVideoInfo } from "@/types/videoInfo";
+import { compareTitle } from "@/utils/compare";
 
 function VideosSection() {
   const { videos } = useVideoContext();
@@ -37,7 +37,7 @@ function VideosSection() {
             new Date(a.publishedAt).getTime()
         );
       }
-      return filteredVideos.slice().sort(compare);
+      return filteredVideos.slice().sort(compareTitle);
     };
 
     const sortedVideos = sortVideos(selectedSort);
