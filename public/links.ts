@@ -19,4 +19,7 @@ export const links = {
   linkedin: 'https://www.linkedin.com/company/leadster-platform/',
   facebook: 'https://web.facebook.com/leadsterplatform',
   instagram: 'https://www.instagram.com/leadster.com.br/',
+  spreadsheet: 'https://onedrive.live.com/download?resid=D78DE6F0FCE82895%21455002&authkey=!AFINH4VChCOy63c&em=2',
+  document: 'https://onedrive.live.com/download?resid=D78DE6F0FCE82895%21455003&authkey=!AOlAvNvfGRmV0iA&em=2',
+  presentation: 'https://onedrive.live.com/download?resid=D78DE6F0FCE82895%21455004&authkey=!AERERirnDwXZdkE&em=2'
 }

@@ -6,8 +6,9 @@ import { useState, useRef, Fragment } from "react";
 import { Transition, Dialog } from "@headlessui/react";
 import Youtube from "react-youtube";
 import * as IconsMd from "react-icons/md";
-import * as IconsIo from "react-icons/io"
-import DownloadButton from "./DownloadButton";
+import * as IconsIo from "react-icons/io";
+import Link from "next/link";
+import { links } from "../../public/links";
 
 /**
  * Renders a video card component.
@@ -30,7 +31,7 @@ function VideoCard({
     height: 360,
     width: 640,
     playerVars: {
-      autoplay: 1,
+      autoplay: 0,
     },
   };
   return (
@@ -88,7 +89,7 @@ function VideoCard({
         as={Fragment}
         afterEnter={() => videoRef.current?.play()}
       >
-        <Dialog initialFocus={videoRef} onClose={() => setModalOpen(false)}>
+        <Dialog initialFocus={videoRef} onClose={() => setModalOpen(true)}>
           {/* Modal backdrop */}
           <Transition.Child
             className="fixed inset-0 z-10 bg-black bg-opacity-50 transition-opacity"
@@ -111,50 +112,101 @@ function VideoCard({
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-75"
           >
-            <div className="relative max-w-5xl mx-auto w-[40rem] h-[75%] flex flex-col items-center text-center bg-white border-t-[5px] border-[#007EFF] rounded-2xl">
-              <IconsMd.MdClose
-                className="absolute left-[38rem] top-[0.8rem] scale-[1.15] hover:fill-[#53596e]"
-                size={16}
-                color="#7D87A8"
-              />
+            {/* Modal block */}
+            <div className="relative max-w-5xl mx-auto w-[40rem] h-fit flex flex-col items-center text-center bg-white border-t-[5px] border-[#007EFF] rounded-2xl">
+              {/* Close button */}
+              <button onClick={() => setModalOpen(false)}>
+                <IconsMd.MdClose
+                  className="absolute left-[38rem] top-[0.8rem] scale-[1.15] hover:fill-[#53596e]"
+                  size={16}
+                  color="#7D87A8"
+                />
+              </button>
+
+              {/* Title */}
               <p className="w-[70%] py-5 font-bold text-xl">{title}</p>
+
+              {/* Video frame */}
               <Dialog.Panel className="w-full max-h-full shadow-2xl aspect-video bg-neutral-800 overflow-hidden">
                 <Youtube videoId={videoId} opts={opts} />
               </Dialog.Panel>
+
+              {/* Description Headline */}
               <p className="w-[93%] text-start font-bold border-b-2 border-neutral-200 pb-[0.4rem] pt-4 text-[#15364a]">
                 Descrição
               </p>
+
+              {/* Description content */}
               <p className="w-[93%] h-fit text-base text-justify font-medium pt-[0.4rem] text-[#15364a]">
                 {description}
               </p>
+
+              {/* Downloads Headline */}
               <p className="w-[93%] text-start font-bold border-b-2 border-neutral-200 pb-[0.4rem] pt-4 text-[#15364a]">
                 Downloads
               </p>
-              
-              <div className="w-[93%] flex justify-start gap-2">
-                <DownloadButton 
-                  text= 'Spreadsheet.xls'
-                  darkColorText= '#49a794'
-                  darkColorIcon= '#00B489'
-                  bgLightColor= '#C2F4EA'
-                  bgDarkColor= '#9FEFDF'
-                />
-                <DownloadButton 
-                  text= 'Document.doc'
-                  darkColorText= '#279BF1'
-                  darkColorIcon= '#1EADF7'
-                  bgLightColor= '#C2E6FF'
-                  bgDarkColor= '#A1D9FF'
-                />
-                <DownloadButton 
-                  text= 'Presentation.ppt'
-                  darkColorText= '#A99445'
-                  darkColorIcon= '#B1982C'
-                  bgLightColor= '#FFF8D0'
-                  bgDarkColor= '#FFF1A0'
-                />
+
+              {/* Downloads buttons */}
+              <div className="w-[93%] flex justify-start gap-2 mb-8 mt-3">
+                {/* Spreadsheet button */}
+                <Link
+                  className='w-[10.8rem] h-[2rem] flex'
+                  href={links.spreadsheet}
+                >
+                  <div
+                    className={`flex justify-center items-center w-[25%] h-full bg-[#9FEFDF] rounded-l-md`}
+                  >
+                    <IconsIo.IoIosCloudDownload size={18} color="#00B489" />
+                  </div>
+                  <div
+                    className={`flex justify-center items-center w-[75%] h-full bg-[#C2F4EA] rounded-r-md`}
+                  >
+                    <p className={`font-bold text-sm text-[#49a794]`}>
+                      Spreadsheet.xls
+                    </p>
+                  </div>
+                </Link>
+
+                {/* Document button */}
+                <Link
+                  className='w-[10.8rem] h-[2rem] flex'
+                  href={links.document}
+                >
+                  <div
+                    className={`flex justify-center items-center w-[25%] h-full bg-[#A1D9FF] rounded-l-md`}
+                  >
+                    <IconsIo.IoIosCloudDownload size={18} color="#1EADF7" />
+                  </div>
+                  <div
+                    className={`flex justify-center items-center w-[75%] h-full bg-[#C2E6FF] rounded-r-md`}
+                  >
+                    <p className={`font-bold text-sm text-[#279BF1]`}>
+                      Document.doc
+                    </p>
+                  </div>
+                </Link>
+
+                {/* Presentation button */}
+                <Link
+                  className='w-[10.8rem] h-[2rem] flex'
+                  href={links.presentation}
+                >
+                  <div
+                    className={`flex justify-center items-center w-[25%] h-full bg-[#FFF1A0] rounded-l-md`}
+                  >
+                    <IconsIo.IoIosCloudDownload size={18} color="#B1982C" />
+                  </div>
+                  <div
+                    className={`flex justify-center items-center w-[75%] h-full bg-[#FFF8D0] rounded-r-md`}
+                  >
+                    <p className={`font-bold text-sm text-[#A99445]`}>
+                      Presentation.ppt
+                    </p>
+                  </div>
+                </Link>
               </div>
             </div>
+            {/* End: Modal block */}
           </Transition.Child>
           {/* End: Modal dialog */}
         </Dialog>
