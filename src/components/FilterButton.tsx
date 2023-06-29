@@ -7,7 +7,7 @@ function FilterButton({ text }: { text: Filters }) {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
-    selectedFilter === text ? setActive(true) : setActive(false);
+    setActive(selectedFilter === text);
   }, [selectedFilter, text]);
 
   const handleClick = () => {
@@ -15,17 +15,20 @@ function FilterButton({ text }: { text: Filters }) {
     setSelectedFilter(text);
   };
 
+  const activeStyles = `
+    bg-[#007EFF] border-[#007EFF] font-extrabold text-[#FFFFFF] hover:bg-[#007EFF] hover:text-[#FFFFFF] hover:border-[#007EFF]
+  `;
+  const inactiveStyles = `
+    hover:border-[#007EFF] hover:text-[#007EFF] border-[#21465e]
+  `;
+
   return (
     <button
       className={`
-      btn normal-case rounded-full px-5 py-2 w-fit h-fit whitespace-nowrap transition duration-200
-      border-[0.1rem] font-semibold text-[0.98rem]
-      ${
-        active
-          ? "bg-[#007EFF] border-[#007EFF] font-extrabold text-[#FFFFFF] hover:bg-[#007EFF] hover:text-[#FFFFFF] hover:border-[#007EFF]"
-          : "hover:border-[#007EFF] hover:text-[#007EFF] border-[#21465e]"
-      }
-    `}
+        btn normal-case rounded-full px-5 py-2 w-fit h-fit whitespace-nowrap transition duration-200
+        border-[0.1rem] font-semibold text-[0.98rem]
+        ${active ? activeStyles : inactiveStyles}
+      `}
       onClick={handleClick}
     >
       {text}
