@@ -1,9 +1,5 @@
 import Image from "next/image";
-/**
- * Renders a banner component.
- *
- * @returns {JSX.Element} The rendered banner component.
- */
+
 function Banner(): JSX.Element {
   return (
     <section className='bg-[#F0F8FF] h-[600px] w-[100%] flex justify-center items-center'>
@@ -17,7 +13,7 @@ function Banner(): JSX.Element {
         </div>
 
         <div className='mt-[-0.5rem] relative'>
-          <span className={`bg-gradient-to-br from-[#2c83fb] to-[#1f76f0] text-transparent bg-clip-text text-[5rem] font-bold`}>
+          <span className={`bg-gradient-to-br from-[#2c83fb] to-[#1f76f0] text-transparent bg-clip-text text-[5rem] font-bgiold`}>
             Mais Conversão
           </span>
           <Image
