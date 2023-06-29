@@ -1,5 +1,5 @@
 import { SortTypes } from '@/types/sortTypes';
-import { createContext, Dispatch, SetStateAction, useContext, useState } from 'react';
+import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from 'react';
 
 type ContextProps = {
   selectedSort: SortTypes;
@@ -8,7 +8,7 @@ type ContextProps = {
 
 const SortContext = createContext<ContextProps>({ selectedSort: 'date', setSelectedSort: ():SortTypes => 'date' || 'title'});
 
-export const SortProvider = ({ children }: { children: any }) =>   {
+export const SortProvider = ({ children }: { children: ReactNode }) =>   {
   const [selectedSort, setSelectedSort] = useState('date' as SortTypes);
   return(
     <SortContext.Provider value={{ selectedSort, setSelectedSort }}>

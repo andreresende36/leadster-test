@@ -13,7 +13,7 @@ function Banner(): JSX.Element {
         </div>
 
         <div className='mt-[-0.5rem] relative'>
-          <span className={`bg-gradient-to-br from-[#2c83fb] to-[#1f76f0] text-transparent bg-clip-text text-[5rem] font-bgiold`}>
+          <span className={`bg-gradient-to-br from-[#2c83fb] to-[#1f76f0] text-transparent bg-clip-text text-[5rem] font-bold`}>
             Mais Conversão
           </span>
           <Image
