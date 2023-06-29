@@ -20,3 +20,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: 002fb2e636352463f37db014e4033e5dcea9b348
+
+        with:
+          organization: andre-resende
+          projectKey: leadster-test
