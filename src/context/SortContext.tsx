@@ -1,6 +1,5 @@
 import { SortTypes } from '@/types/sortTypes';
 import { createContext, Dispatch, SetStateAction, useContext, useState } from 'react';
-import videoData from "../../public/leadster-yt-database";
 
 type ContextProps = {
   selectedSort: SortTypes;
