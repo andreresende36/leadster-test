@@ -31,7 +31,7 @@ function VideoCard({
   return (
     <>
       <button
-        className="group relative w-[22rem] h-72 rounded-xl shadow-xl transition duration-400 hover:text-[#007EFF] ease-in-out hover:scale-[1.007] m-2"
+        className="group relative w-[22rem] h-72 rounded-xl shadow-xl transition duration-400 hover:text-[#007EFF] ease-in-out hover:scale-[1.007] m-2 phone:scale-[0.9] phone:hover:scale-[0.9063]"
         onClick={() => {
           setModalOpen(true);
         }}

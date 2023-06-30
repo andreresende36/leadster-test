@@ -8,7 +8,7 @@ function Stats() {
       className={`
       bg-[#F0F8FF] h-[48rem] w-[100%] 
       flex justify-center items-center gap-10 text-[#15364A]
-      phone: flex-col phone:gap-0 phone:h-fit
+      phone:flex-col phone:gap-0 phone:h-fit phone:py-3
       `}
     >
       <div className="w-[50%] flex justify-end items-center phone:w-full phone:min-h-0 phone:h-80 phone:mt-2">
@@ -40,7 +40,7 @@ function Stats() {
             <button
               className={`btn rounded-full bg-[#0083FF] border-0 text-white 
               font-semibold px-8 py-[1.5rem] w-fit h-fit shadow-md 
-              hover:bg-[#0077e7] phone:w-80
+              hover:bg-[#0077e7] phone:w-80 phone:my-2
               `}
             >
               Ver Demonstração
