@@ -27,7 +27,7 @@ function Stats() {
       </div>
 
       <div className="w-[50%] flex flex-col justify-start items-center phone:max-tablet-portrait:w-full ">
-        <div className="w-full flex flex-col gap-4 phone:max-tablet-portrait:gap-2 phone:max-tablet-portrait:ml-20">
+        <div className="w-full flex flex-col gap-4 phone:max-tablet-portrait:gap-2 phone:max-tablet-portrait:pl-10">
           <p className="text-4xl font-medium phone:text-2xl">
             Pronto para triplicar sua <br />
             <span className="font-bold">Geração de Leads?</span>
