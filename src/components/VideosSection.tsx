@@ -90,7 +90,7 @@ function VideosSection() {
     <section className={`
       h-fit m-auto flex flex-col
       phone:w-full
-      tablet-portrait:w-[80%]
+      tablet-portrait:w-[98%] tablet-portrait:pt-2
       tablet-landscape:w-[80%]
       desktop:w-[80%]
       big-desktop:w-[80%]
@@ -99,7 +99,7 @@ function VideosSection() {
         flex justify-around items-center mt-20 pb-5 
         border-b-[2.5px] border-[#DCDFE2] 
         phone:mt-4 phone:flex-col
-        tablet-portrait:mt-20 tablet-portrait:flex-row 
+        tablet-portrait:mt-6 tablet-portrait:flex-row
         tablet-landscape:mt-20 tablet-landscape:flex-row 
         desktop:mt-20 desktop:flex-row 
         big-desktop:mt-20 big-desktop:flex-row 
