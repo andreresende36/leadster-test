@@ -22,8 +22,15 @@ function VideoCard({
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const opts = {
-    height: 360,
+    height: 180,
     width: 640,
+    playerVars: {
+      autoplay: 0,
+    },
+  };
+  const optsPhone = {
+    height: 195,
+    width: 345,
     playerVars: {
       autoplay: 0,
     },
@@ -31,7 +38,7 @@ function VideoCard({
   return (
     <>
       <button
-        className="group relative w-[22rem] h-72 rounded-xl shadow-xl transition duration-400 hover:text-[#007EFF] ease-in-out hover:scale-[1.007] m-2 phone:scale-[0.9] phone:hover:scale-[0.9063]"
+        className="group relative w-[22rem] h-72 rounded-xl shadow-xl transition duration-400 hover:text-[#007EFF] ease-in-out hover:scale-[1.007] m-2 phone:m-0 phone:scale-[0.9] phone:hover:scale-[0.9063]"
         onClick={() => {
           setModalOpen(true);
         }}
@@ -107,41 +114,46 @@ function VideoCard({
             leaveTo="opacity-0 scale-75"
           >
             {/* Modal block */}
-            <div className="relative max-w-5xl mx-auto w-[40rem] h-fit flex flex-col items-center text-center bg-white border-t-[5px] border-[#007EFF] rounded-2xl">
+            <div className="relative max-w-5xl mx-auto w-[40rem] h-fit flex flex-col items-center text-center bg-white border-t-[5px] border-[#007EFF] rounded-2xl phone:w-full">
               {/* Close button */}
               <button onClick={() => setModalOpen(false)}>
                 <IconsMd.MdClose
-                  className="absolute left-[38rem] top-[0.8rem] scale-[1.15] hover:fill-[#53596e]"
+                  className="absolute left-[38rem] top-[0.8rem] scale-[1.15] hover:fill-[#53596e] phone:left-[19.7rem] phone:top-[0.7rem]"
                   size={16}
                   color="#7D87A8"
                 />
               </button>
 
               {/* Title */}
-              <p className="w-[70%] py-5 font-bold text-xl">{title}</p>
+              <p className="w-[70%] py-5 font-bold text-xl phone:text-base phone:w-[90%] phone:pt-7">{title}</p>
 
               {/* Video frame */}
-              <Dialog.Panel className="w-full max-h-full shadow-2xl aspect-video bg-neutral-800 overflow-hidden">
+              <Dialog.Panel className="hidden phone:flex w-full max-h-full shadow-2xl aspect-video bg-neutral-800 overflow-hidden">
+                <Youtube videoId={videoId} opts={optsPhone} />
+              </Dialog.Panel>
+
+              <Dialog.Panel className="phone:hidden w-full max-h-full shadow-2xl aspect-video bg-neutral-800 overflow-hidden">
                 <Youtube videoId={videoId} opts={opts} />
               </Dialog.Panel>
 
+
               {/* Description Headline */}
-              <p className="w-[93%] text-start font-bold border-b-2 border-neutral-200 pb-[0.4rem] pt-4 text-[#15364a]">
+              <p className="w-[93%] text-start font-bold border-b-2 border-neutral-200 pb-[0.4rem] pt-4 text-[#15364a] phone:text-sm">
                 Descrição
               </p>
 
               {/* Description content */}
-              <p className="w-[93%] h-fit text-base text-justify font-medium pt-[0.4rem] text-[#15364a]">
+              <p className="w-[93%] h-fit text-base text-justify font-medium pt-[0.4rem] text-[#15364a] phone:text-sm">
                 {description}
               </p>
 
               {/* Downloads Headline */}
-              <p className="w-[93%] text-start font-bold border-b-2 border-neutral-200 pb-[0.4rem] pt-4 text-[#15364a]">
+              <p className="w-[93%] text-start font-bold border-b-2 border-neutral-200 pb-[0.4rem] pt-4 text-[#15364a] phone:text-sm">
                 Downloads
               </p>
 
               {/* Downloads buttons */}
-              <div className="w-[93%] flex justify-start gap-2 mb-8 mt-3">
+              <div className="w-[93%] flex justify-start gap-2 mb-8 mt-3 phone:flex-col">
                 {/* Spreadsheet button */}
                 <Link
                   className='group w-[10.8rem] h-[2rem] flex'

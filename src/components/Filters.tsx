@@ -16,7 +16,7 @@ function Filters() {
   return (
     <div className={`
       flex gap-5 flex-wrap w-[70%]
-      phone: phone:justify-between phone:gap-2
+      phone: phone:justify-evenly phone:gap-2
       tablet-portrait:
       tablet-landscape:
       desktop:
