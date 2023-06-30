@@ -6,7 +6,7 @@ function Banner(): JSX.Element {
     <section className={`
       flex bg-[#F0F8FF] w-[100%] justify-center items-center
       phone:h-fit phone:py-8
-      tablet-portrait:h-[36rem]
+      tablet-portrait:h-[26rem]
       tablet-landscape:h-[36rem]
       desktop:h-[36rem]
       big-desktop:h-[36rem]
@@ -82,12 +82,14 @@ function Banner(): JSX.Element {
         <div className={
           `text-[#1C3C50] font-semibold text-center border-t-2 border-[#D7E2EA] w-[108%]
           phone:text-xs phone:p-2
-          tablet-portrait:text-base tablet-portrait:p-4
+          tablet-portrait:text-lg tablet-portrait:p-4 tablet-portrait:w-[80%]
           tablet-landscape:text-base tablet-landscape:p-4
           desktop:text-base desktop:p-4
           big-desktop:text-base big-desktop:p-4
           `}>
-          Conheça as estratégias que <span className='font-extrabold'>mudaram o jogo</span> e como aplicá-las no seu negócio
+            <div className="tablet-portrait:w-[80%] tablet-portrait:m-auto">
+              Conheça as estratégias que <span className='font-extrabold tablet-portrait:text-[1.1rem]'>mudaram o jogo</span> e como aplicá-las no seu negócio
+            </div>
         </div>
       </div>
     </section>
