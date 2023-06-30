@@ -5,7 +5,7 @@ function Banner(): JSX.Element {
     // Full banner
     <section className={`
       flex bg-[#F0F8FF] w-[100%] justify-center items-center
-      phone:h-fit phone:pt-5 phone:pb-3
+      phone:h-fit phone:py-8
       tablet-portrait:h-[36rem]
       tablet-landscape:h-[36rem]
       desktop:h-[36rem]
