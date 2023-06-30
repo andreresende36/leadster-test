@@ -27,11 +27,11 @@ function Footer() {
     <footer
       className={`
       h-fit
-      flex flex-col items-center gap-9
+      flex flex-col items-center phone:items-start gap-9 phone:min-w-0 phone:w-[85%] phone:m-auto
       text-[#15364A] pt-12
       `}
     >
-      <div className="w-full flex flex-col items-center justify-center">
+      <div className="w-full flex flex-col items-center justify-center phone:items-start">
         <Link href={home}>
           <Image
             src="/leadster_270.gif"
@@ -44,9 +44,9 @@ function Footer() {
           </span>
         </Link>
       </div>
-      <div className="flex w-[70%] justify-between">
+      <div className="flex w-[70%] justify-between phone:flex-col phone:gap-6">
         <div className="flex flex-col gap-3">
-          <span className="font-extrabold text-[0.95rem] pb-6">
+          <span className="font-extrabold text-[0.95rem] pb-6 phone:pb-2">
             Links Principais
           </span>
           <Link href={home} className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
@@ -63,7 +63,7 @@ function Footer() {
           </Link>
         </div>
         <div className="flex flex-col gap-3">
-          <span className="font-extrabold text-[0.95rem] pb-6">Cases</span>
+          <span className="font-extrabold text-[0.95rem] pb-6 phone:pb-2">Cases</span>
           <Link href={b2b} className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Geração de Leads B2B
           </Link>
@@ -78,7 +78,7 @@ function Footer() {
           </Link>
         </div>
         <div className="flex flex-col gap-3">
-          <span className="font-extrabold text-[0.95rem] pb-6">Materiais</span>
+          <span className="font-extrabold text-[0.95rem] pb-6 phone:pb-2">Materiais</span>
           <Link href={blog} className="text-[#15364aa8] text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Blog
           </Link>
@@ -93,7 +93,7 @@ function Footer() {
           </Link>
         </div>
         <div className="flex flex-col gap-3">
-          <span className="font-extrabold text-[0.95rem] pb-1">
+          <span className="font-extrabold text-[0.95rem] pb-2">
             Siga a Leadster
           </span>
           <div className="flex gap-2">
@@ -118,9 +118,9 @@ function Footer() {
           </Link>
         </div>
       </div>
-      <div className="w-full gap-16 font-semibold text-xs border-t-2 text-[#15364a80] py-8 mt-12">
-        <div className="w-[80%] flex justify-between m-auto">
-          <p>
+      <div className="w-full gap-16 font-semibold text-xs border-t-2 text-[#15364a80] py-8 mt-12 phone:mt-0 phone:py-3">
+        <div className="w-[80%] flex justify-between m-auto phone:w-full phone:flex-col">
+          <p className="phone:text-center">
             Copyright © 2015 - 2022 Todos os direitos reservados |{" "}
             <Link
               href={home}
@@ -129,7 +129,7 @@ function Footer() {
               Leadster
             </Link>
           </p>
-          <p className="text-end">
+          <p className="text-end phone:text-center">
             Rua José Loureiro, 464 - Centro - Curitiba PR - CEP:80010-000 |{" "}
             <Link
               href={termosDeUso}
