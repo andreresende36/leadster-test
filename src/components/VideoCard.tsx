@@ -22,7 +22,7 @@ function VideoCard({
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const opts = {
-    height: 360,
+    height: 180,
     width: 640,
     playerVars: {
       autoplay: 0,
@@ -38,13 +38,7 @@ function VideoCard({
   return (
     <>
       <button
-        className={`
-        group relative w-[22rem] h-72 rounded-xl shadow-xl transition 
-        duration-400 hover:text-[#007EFF] ease-in-out hover:scale-[1.007] 
-        m-2 
-        phone:max-tablet-portrait:m-0 phone:max-tablet-portrait:scale-[0.9] phone:max-tablet-portrait:hover:scale-[0.9063]
-        
-        `}
+        className="group relative w-[22rem] h-72 rounded-xl shadow-xl transition duration-400 hover:text-[#007EFF] ease-in-out hover:scale-[1.007] m-2 phone:m-0 phone:scale-[0.9] phone:hover:scale-[0.9063]"
         onClick={() => {
           setModalOpen(true);
         }}
@@ -120,25 +114,25 @@ function VideoCard({
             leaveTo="opacity-0 scale-75"
           >
             {/* Modal block */}
-            <div className="relative max-w-5xl mx-auto w-[40rem] h-fit flex flex-col items-center text-center bg-white border-t-[5px] border-[#007EFF] rounded-2xl phone:max-tablet-portrait:w-full">
+            <div className="relative max-w-5xl mx-auto w-[40rem] h-fit flex flex-col items-center text-center bg-white border-t-[5px] border-[#007EFF] rounded-2xl phone:w-full">
               {/* Close button */}
               <button onClick={() => setModalOpen(false)}>
                 <IconsMd.MdClose
-                  className="absolute left-[38rem] top-[0.8rem] scale-[1.15] hover:fill-[#53596e] phone:max-tablet-portrait:left-[19.7rem] phone:max-tablet-portrait:top-[0.7rem]"
+                  className="absolute left-[38rem] top-[0.8rem] scale-[1.15] hover:fill-[#53596e] phone:left-[19.7rem] phone:top-[0.7rem]"
                   size={16}
                   color="#7D87A8"
                 />
               </button>
 
               {/* Title */}
-              <p className="w-[70%] py-5 font-bold text-xl phone:max-tablet-portrait:text-base phone:max-tablet-portrait:w-[90%] phone:max-tablet-portrait:pt-7">{title}</p>
+              <p className="w-[70%] py-5 font-bold text-xl phone:text-base phone:w-[90%] phone:pt-7">{title}</p>
 
               {/* Video frame */}
-              <Dialog.Panel className="hidden phone:max-tablet-portrait:flex w-full max-h-full shadow-2xl aspect-video bg-neutral-800 overflow-hidden">
+              <Dialog.Panel className="hidden phone:flex w-full max-h-full shadow-2xl aspect-video bg-neutral-800 overflow-hidden">
                 <Youtube videoId={videoId} opts={optsPhone} />
               </Dialog.Panel>
 
-              <Dialog.Panel className="phone:max-tablet-portrait:hidden w-full max-h-full shadow-2xl aspect-video bg-neutral-800 overflow-hidden">
+              <Dialog.Panel className="phone:hidden w-full max-h-full shadow-2xl aspect-video bg-neutral-800 overflow-hidden">
                 <Youtube videoId={videoId} opts={opts} />
               </Dialog.Panel>
 
@@ -159,7 +153,7 @@ function VideoCard({
               </p>
 
               {/* Downloads buttons */}
-              <div className="w-[93%] flex justify-start gap-2 mb-8 mt-3 phone:max-tablet-portrait:flex-col">
+              <div className="w-[93%] flex justify-start gap-2 mb-8 mt-3 phone:flex-col">
                 {/* Spreadsheet button */}
                 <Link
                   className='group w-[10.8rem] h-[2rem] flex'
