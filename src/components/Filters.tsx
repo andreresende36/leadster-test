@@ -14,14 +14,7 @@ function Filters() {
   }, []);
 
   return (
-    <div className={`
-      flex gap-5 flex-wrap w-[70%]
-      phone: phone:justify-evenly phone:gap-2
-      tablet-portrait:
-      tablet-landscape:
-      desktop:
-      big-desktop:
-      `}>
+    <div className="w-[70%] flex gap-5 flex-wrap">
       {categories.map((category) => (
         <FilterButton text={category} key={category} />
       ))}
