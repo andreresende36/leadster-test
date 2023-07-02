@@ -7,7 +7,6 @@ const Header = () => (
     flex justify-center items-center w-[100%] 
     phone:h-[4rem]
     tablet-portrait:h-[6rem]
-    tablet-landscape:h-[8rem]
     desktop:h-[8rem]
     big-desktop:h-[8rem]
     `}>

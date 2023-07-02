@@ -68,7 +68,7 @@ function Stats() {
         {/* Phone/Tablet Portrait view */}
         <div className={`
           hidden phone:flex mt-4 phone:max-tablet-portrait:justify-around phone:max-tablet-portrait:items-center phone:w-[92%] 
-          tablet-portrait:w-full tablet-portrait:gap-6 tablet-portrait:-ml-10 tablet-portrait:pt-2`}>
+          tablet-portrait:w-full tablet-portrait:gap-3 tablet-portrait:-ml-10 tablet-portrait:pt-2`}>
           <Image
             src="/selo_RD.png"
             alt="Selo RD Station"
@@ -76,15 +76,15 @@ function Stats() {
             height={73}
             className="scale-[0.75] tablet-portrait:scale-100 tablet-portrait:w-[11rem]"
           />
-          <div className="flex flex-col justify-center items-center tablet-portrait:items-start tablet-portrait:gap-2">
+          <div className="flex flex-col justify-center items-center tablet-portrait:gap-1">
             <Image
               src="/card.webp"
               alt="Cartão de crédito"
               width={16}
               height={16}
-              className="w-[1.5rem] h-[1.5rem] ml-10"
+              className="w-[1.4rem] h-[1.4rem] m-auto"
             />
-            <p className="font-medium text-center text-sm tablet-portrait:text-left tablet-portrait:w-36 tablet-portrait:pb-1">
+            <p className="font-medium text-center text-sm tablet-portrait:w-36 tablet-portrait:pb-1">
               <span className="font-extrabold">Não</span> é necessário Cartão de
               Crédito
             </p>

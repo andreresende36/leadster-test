@@ -61,7 +61,7 @@ function VideosSection() {
 
   const distributeVideosByPage = (pageNumber: number) => {
     return (
-      <SwiperSlide>
+      <SwiperSlide key={pageNumber}>
         {localVideos
           .slice((pageNumber - 1) * videosPerPage, pageNumber * videosPerPage)
           .map((video) => (
@@ -101,7 +101,7 @@ function VideosSection() {
         phone:flex-col phone:max-tablet-portrait:w-[85%]
         phone:m-auto phone:max-tablet-portrait:mt-4
         tablet-portrait:w-[90%] tablet-portrait:mt-6 tablet-portrait:flex-row
-        tablet-landscape:mt-20 tablet-landscape:flex-row 
+        tablet-landscape:flex-row 
         desktop:mt-20 desktop:flex-row 
         big-desktop:mt-20 big-desktop:flex-row 
         `}>

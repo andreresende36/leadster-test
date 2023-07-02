@@ -7,7 +7,6 @@ function Banner(): JSX.Element {
       flex bg-[#F0F8FF] w-[100%] justify-center items-center
       phone:h-fit phone:py-8
       tablet-portrait:h-[26rem]
-      tablet-landscape:h-[36rem]
       desktop:h-[36rem]
       big-desktop:h-[36rem]
       `}>
