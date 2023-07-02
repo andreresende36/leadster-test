@@ -82,7 +82,7 @@ function Stats() {
               alt="Cartão de crédito"
               width={16}
               height={16}
-              className="w-fit h-fit tablet-portrait:pl-12"
+              className="w-[1.5rem] h-[1.5rem] ml-10"
             />
             <p className="font-medium text-center text-sm tablet-portrait:text-left tablet-portrait:w-36 tablet-portrait:pb-1">
               <span className="font-extrabold">Não</span> é necessário Cartão de
