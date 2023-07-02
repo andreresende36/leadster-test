@@ -97,8 +97,9 @@ function VideosSection() {
       `}>
       <div className={`
         flex justify-around items-center mt-20 pb-5 
-        border-b-[2.5px] border-[#DCDFE2] 
-        phone:mt-4 phone:flex-col
+        border-b-[2.5px] border-[#DCDFE2]
+        phone:flex-col phone:max-tablet-portrait:w-[85%]
+        phone:max-tablet-portrait:m-auto phone:max-tablet-portrait:mt-4 
         tablet-portrait:mt-6 tablet-portrait:flex-row
         tablet-landscape:mt-20 tablet-landscape:flex-row 
         desktop:mt-20 desktop:flex-row 

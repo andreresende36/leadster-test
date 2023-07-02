@@ -15,7 +15,7 @@ function Banner(): JSX.Element {
       {/* Texts div */}
       <div className={`
       flex flex-col items-center text-center
-      phone:w-[85%]
+      phone:w-[90%]
       tablet-portrait:w-full
       tablet-landscape:w-full
       desktop:w-full
@@ -53,7 +53,8 @@ function Banner(): JSX.Element {
           {/* Text */}
           <span className={`
           bg-gradient-to-br from-[#2c83fb] to-[#1f76f0] text-transparent bg-clip-text text-[5rem] font-bold
-          phone:text-[2.05rem]
+          phone:text-[2.5rem]
+          min-[0px]:max-[320px]:text-[2.2rem]
           tablet-portrait:text-[5rem]
           tablet-landscape:text-[5rem]
           desktop:text-[5rem]
@@ -69,7 +70,8 @@ function Banner(): JSX.Element {
             height={32}
             className={`
             absolute
-            phone:scale-[0.60] phone:-top-[0.1rem] phone:left-[90%]
+            phone:scale-[0.60] phone:top-[0.1rem] phone:left-[91.5%]
+            min-[0px]:max-[320px]:-top-[0.1rem] min-[0px]:max-[320px]:left-[90%]
             tablet-portrait:scale-100 tablet-portrait:top-[1.4rem] tablet-portrait:left-[95%]
             tablet-landscape:scale-100 tablet-landscape:top-[1.4rem] tablet-landscape:left-[95%]
             desktop:scale-100 desktop:top-[1.4rem] desktop:left-[95%]
@@ -81,7 +83,7 @@ function Banner(): JSX.Element {
         {/* Final text - Strategies */}
         <div className={
           `text-[#1C3C50] font-semibold text-center border-t-2 border-[#D7E2EA] w-[108%]
-          phone:text-xs phone:p-2
+          phone:text-xs phone:p-2 phone:max-tablet-portrait:w-fit
           tablet-portrait:text-lg tablet-portrait:p-4 tablet-portrait:w-[80%]
           tablet-landscape:text-base tablet-landscape:p-4
           desktop:text-base desktop:p-4
