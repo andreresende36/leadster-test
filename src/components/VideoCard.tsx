@@ -29,8 +29,8 @@ function VideoCard({
     },
   };
   const optsPhone = {
-    height: 195,
-    width: 345,
+    height: (window.innerWidth * 0.92 / 1.7777777777),
+    width: window.innerWidth * 0.92,
     playerVars: {
       autoplay: 0,
     },
@@ -91,6 +91,7 @@ function VideoCard({
           </p>
         </div>
       </button>
+      
       <Transition
         show={modalOpen}
         as={Fragment}
@@ -111,7 +112,9 @@ function VideoCard({
           {/* End: Modal backdrop */}
           {/* Modal dialog */}
           <Transition.Child
-            className="fixed inset-0 z-10 flex p-6"
+            className={`fixed inset-0 z-10 flex p-6 
+            phone:max-tablet-portrait:p-0 phone:max-tablet-portrait:flex 
+            phone:max-tablet-portrait:justify-center phone:max-tablet-portrait:items-center`}
             enter="transition ease-out duration-300"
             enterFrom="opacity-0 scale-75"
             enterTo="opacity-100 scale-100"
@@ -120,11 +123,21 @@ function VideoCard({
             leaveTo="opacity-0 scale-75"
           >
             {/* Modal block */}
-            <div className="relative max-w-5xl mx-auto w-[40rem] h-fit flex flex-col items-center text-center bg-white border-t-[5px] border-[#007EFF] rounded-2xl phone:max-tablet-portrait:w-full">
+            <div className={`
+              relative max-w-5xl mx-auto w-[40rem] h-fit 
+              flex flex-col items-center text-center bg-white border-t-[5px] 
+              border-[#007EFF] rounded-2xl 
+              phone:max-tablet-portrait:w-[92%]`}>
               {/* Close button */}
               <button onClick={() => setModalOpen(false)}>
                 <IconsMd.MdClose
-                  className="absolute left-[38rem] top-[0.8rem] scale-[1.15] hover:fill-[#53596e] phone:max-tablet-portrait:left-[19.7rem] phone:max-tablet-portrait:top-[0.7rem]"
+                  className={`
+                    absolute left-[38rem] top-[0.8rem] scale-[1.15] 
+                    hover:fill-[#53596e]
+                    phone:max-tablet-portrait:left-0
+                    phone:max-tablet-portrait:top-[2%]
+                    phone:max-tablet-portrait:ml-[92%]
+                    `}
                   size={16}
                   color="#7D87A8"
                 />
@@ -134,13 +147,15 @@ function VideoCard({
               <p className="w-[70%] py-5 font-bold text-xl phone:max-tablet-portrait:text-base phone:max-tablet-portrait:w-[90%] phone:max-tablet-portrait:pt-7">{title}</p>
 
               {/* Video frame */}
-              <Dialog.Panel className="hidden phone:max-tablet-portrait:flex w-full max-h-full shadow-2xl aspect-video bg-neutral-800 overflow-hidden">
-                <Youtube videoId={videoId} opts={optsPhone} />
-              </Dialog.Panel>
+                {/* Phone view */}
+                <Dialog.Panel className="hidden phone:max-tablet-portrait:flex w-full max-h-full shadow-2xl aspect-video bg-neutral-800 overflow-hidden">
+                  <Youtube videoId={videoId} opts={optsPhone} />
+                </Dialog.Panel>
 
-              <Dialog.Panel className="phone:max-tablet-portrait:hidden w-full max-h-full shadow-2xl aspect-video bg-neutral-800 overflow-hidden">
-                <Youtube videoId={videoId} opts={opts} />
-              </Dialog.Panel>
+                {/* Other views */}
+                <Dialog.Panel className="phone:max-tablet-portrait:hidden w-full max-h-full shadow-2xl aspect-video bg-neutral-800 overflow-hidden">
+                  <Youtube videoId={videoId} opts={opts} />
+                </Dialog.Panel>
 
 
               {/* Description Headline */}
@@ -159,7 +174,7 @@ function VideoCard({
               </p>
 
               {/* Downloads buttons */}
-              <div className="w-[93%] flex justify-start gap-2 mb-8 mt-3 phone:max-tablet-portrait:flex-col">
+              <div className="w-[93%] flex justify-start gap-2 mb-8 mt-3 phone:max-tablet-portrait:flex-col phone:max-tablet-portrait:items-center">
                 {/* Spreadsheet button */}
                 <Link
                   className='group w-[10.8rem] h-[2rem] flex'
