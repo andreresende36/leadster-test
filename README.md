@@ -1,4 +1,5 @@
 # Página de vídeos da Leadster
+<p align="center"><img src="https://imgur.com/70N1ZFu.gif" /></p>
 
 Página desenvolvida como um teste para concorrer a vaga de desenvolvedor Front-end na Leadster. Permaneci bastante engajado bastante durante o projeto buscando sempre seguir as orientações de conteúdo e layout que me foram passados, bem como colocar alguns adicionais que julguei ainda melhores para o design e experiência do usuário.
 
