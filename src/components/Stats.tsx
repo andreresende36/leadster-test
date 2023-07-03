@@ -43,17 +43,13 @@ function Stats() {
         <div className="w-full flex items-center mt-4 gap-3 phone:max-desktop:flex-col tablet-portrait:max-desktop:items-start">
           <Link
             href={links.demonstracao}
-            className="phone:max-tablet-portrait:w-full phone:max-tablet-portrait:flex phone:max-tablet-portrait:justify-center"
+            className={`btn rounded-full bg-[#0083FF] border-0 text-white
+            font-semibold px-8 py-[1.5rem] w-fit h-fit shadow-md hover:bg-[#0077e7]
+            phone:max-tablet-portrait:flex phone:max-tablet-portrait:justify-center  
+            phone:max-tablet-portrait:w-80 phone:max-tablet-portrait:my-2
+            tablet-portrait:max-desktop:w-[18.5rem]`}
           >
-            <button
-              className={`btn rounded-full bg-[#0083FF] border-0 text-white 
-              font-semibold px-8 py-[1.5rem] w-fit h-fit shadow-md 
-              hover:bg-[#0077e7] phone:max-tablet-portrait:w-80 phone:max-tablet-portrait:my-2
-              tablet-portrait:max-desktop:w-[18.5rem] 
-              `}
-            >
-              Ver Demonstração
-            </button>
+            Ver Demonstração
           </Link>
           <Image
             src="/selo_RD.png"
@@ -83,10 +79,10 @@ function Stats() {
               height={16}
               className="w-[1.4rem] h-[1.4rem] m-auto"
             />
-            <p className="font-medium text-center text-sm tablet-portrait:max-desktop:w-36 tablet-portrait:max-desktop:pb-1">
+            <span className="font-medium text-center text-sm tablet-portrait:max-desktop:w-36 tablet-portrait:max-desktop:pb-1">
               <span className="font-extrabold">Não</span> é necessário Cartão de
               Crédito
-            </p>
+            </span>
           </div>
         </div>
         <div className={
@@ -99,9 +95,9 @@ function Stats() {
             height={16}
             className="object-contain w-36"
           />
-          <p className="font-medium">
+          <span className="font-medium">
             <span className="font-bold">4.9/5</span> média de satisfação
-          </p>
+          </span>
         </div>
 
         {/* Other devices */}
@@ -114,10 +110,10 @@ function Stats() {
             className="w-fit h-fit"
           />
 
-          <p className="font-medium pr-3 border-r-2 border-[#15364a98]">
+          <span className="font-medium pr-3 border-r-2 border-[#15364a98]">
             <span className="font-bold">Não</span> é necessário Cartão de
             Crédito
-          </p>
+          </span>
 
           <Image
             src="/rating.webp"
@@ -127,9 +123,9 @@ function Stats() {
             className="pl-2 pr-1 object-contain"
           />
 
-          <p className="font-medium">
+          <span className="font-medium">
             <span className="font-bold">4.9/5</span> média de satisfação
-          </p>
+          </span>
         </div>
       </div>
     </section>
