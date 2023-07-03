@@ -159,9 +159,9 @@ function VideoCard({
 
 
               {/* Description Headline */}
-              <h3 className="w-[93%] text-start font-bold border-b-2 border-neutral-200 pb-[0.4rem] pt-4 text-[#15364a] phone:text-sm">
+              <p className="w-[93%] text-start font-bold border-b-2 border-neutral-200 pb-[0.4rem] pt-4 text-[#15364a] phone:text-sm">
                 Descrição
-              </h3>
+              </p>
 
               {/* Description content */}
               <p className="w-[93%] h-fit text-base text-justify font-medium pt-[0.4rem] text-[#15364a] phone:text-sm">
@@ -169,9 +169,9 @@ function VideoCard({
               </p>
 
               {/* Downloads Headline */}
-              <h3 className="w-[93%] text-start font-bold border-b-2 border-neutral-200 pb-[0.4rem] pt-4 text-[#15364a] phone:text-sm">
+              <p className="w-[93%] text-start font-bold border-b-2 border-neutral-200 pb-[0.4rem] pt-4 text-[#15364a] phone:text-sm">
                 Downloads
-              </h3>
+              </p>
 
               {/* Downloads buttons */}
               <div className="w-[93%] flex justify-start gap-2 mb-8 mt-3 phone:max-tablet-portrait:flex-col phone:max-tablet-portrait:items-center">
@@ -188,9 +188,9 @@ function VideoCard({
                   <div
                     className={`flex justify-center items-center w-[75%] h-full bg-[#C2F4EA] rounded-r-md group-hover:bg-[#bcece2]`}
                   >
-                    <span className={`font-bold text-sm text-[#49a794]`}>
+                    <p className={`font-bold text-sm text-[#49a794]`}>
                       Spreadsheet.xls
-                    </span>
+                    </p>
                   </div>
                 </Link>
 
@@ -207,9 +207,9 @@ function VideoCard({
                   <div
                     className={`flex justify-center items-center w-[75%] h-full bg-[#C2E6FF] rounded-r-md group-hover:bg-[#c0e3fa]`}
                   >
-                    <span className={`font-bold text-sm text-[#279BF1]`}>
+                    <p className={`font-bold text-sm text-[#279BF1]`}>
                       Document.doc
-                    </span>
+                    </p>
                   </div>
                 </Link>
 
@@ -226,9 +226,9 @@ function VideoCard({
                   <div
                     className={`flex justify-center items-center w-[75%] h-full bg-[#FFF8D0] rounded-r-md group-hover:bg-[#f8f0ca]`}
                   >
-                    <span className={`font-bold text-sm text-[#A99445]`}>
+                    <p className={`font-bold text-sm text-[#A99445]`}>
                       Presentation.ppt
-                    </span>
+                    </p>
                   </div>
                 </Link>
               </div>
