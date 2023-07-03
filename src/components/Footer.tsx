@@ -47,9 +47,9 @@ function Footer() {
       </div>
       <div className="flex justify-between phone:max-tablet-portrait:flex-col phone:max-tablet-portrait:gap-6 tablet-portrait:w-[95%] tablet-landscape:w-[90%] desktop:w-[70%] big-desktop:w-[45%]">
         <div className="flex flex-col gap-3">
-          <span className="font-extrabold text-[1.2rem] tablet-portrait:max-tablet-landscape:text-[0.95rem] pb-6 phone:max-tablet-portrait:pb-2">
+          <h3 className="font-extrabold text-[1.2rem] tablet-portrait:max-tablet-landscape:text-[0.95rem] pb-6 phone:max-tablet-portrait:pb-2">
             Links Principais
-          </span>
+          </h3>
           <Link href={home} className="text-[#15364aa8] text-base tablet-portrait:max-tablet-landscape:text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Home
           </Link>
@@ -64,7 +64,7 @@ function Footer() {
           </Link>
         </div>
         <div className="flex flex-col gap-3">
-          <span className="font-extrabold text-[1.2rem] tablet-portrait:max-tablet-landscape:text-[0.95rem] pb-6 phone:max-tablet-portrait:pb-2">Cases</span>
+          <h3 className="font-extrabold text-[1.2rem] tablet-portrait:max-tablet-landscape:text-[0.95rem] pb-6 phone:max-tablet-portrait:pb-2">Cases</h3>
           <Link href={b2b} className="text-[#15364aa8] text-base tablet-portrait:max-tablet-landscape:text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Geração de Leads B2B
           </Link>
@@ -79,7 +79,7 @@ function Footer() {
           </Link>
         </div>
         <div className="flex flex-col gap-3">
-          <span className="font-extrabold text-[1.2rem] tablet-portrait:max-tablet-landscape:text-[0.95rem] pb-6 phone:max-tablet-portrait:pb-2">Materiais</span>
+          <h3 className="font-extrabold text-[1.2rem] tablet-portrait:max-tablet-landscape:text-[0.95rem] pb-6 phone:max-tablet-portrait:pb-2">Materiais</h3>
           <Link href={blog} className="text-[#15364aa8] text-base tablet-portrait:max-tablet-landscape:text-sm font-medium link no-underline hover:text-[#1d4c69] transition duration-200">
             Blog
           </Link>
@@ -94,9 +94,9 @@ function Footer() {
           </Link>
         </div>
         <div className="flex flex-col gap-3">
-          <span className="font-extrabold text-[1.2rem] tablet-portrait:max-tablet-landscape:text-[0.95rem] pb-2">
+          <h3 className="font-extrabold text-[1.2rem] tablet-portrait:max-tablet-landscape:text-[0.95rem] pb-2">
             Siga a Leadster
-          </span>
+          </h3>
           <div className="flex gap-2">
             <Link target="_blank" href={linkedin} className="btn btn-circle border-0 bg-[#F7F8FB] hover:bg-[#e3e4e9] scale-90">
               <Icons.FaLinkedinIn size={18} color="#7D87A8" />
