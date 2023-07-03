@@ -18,7 +18,7 @@ function Banner(): JSX.Element {
       `}>
 
         {/* Webinars */}
-        <div className={`
+        <h3 className={`
         uppercase flex justify-center items-center w-[12.5rem] h-[2rem] text-sm mb-4
         rounded-tl-3xl rounded-bl-lg rounded-r-3xl font-extrabold 
         text-[#2383fb] border-[#2383fb] border-[0.15rem]
@@ -28,18 +28,18 @@ function Banner(): JSX.Element {
         phone:max-tablet-portrait:mb-1
         `}>
           Webinars Exclusivos
-        </div>
+        </h3>
 
         {/* Menos conversinha */}
-        <div className={`
+        <h2 className={`
           text-[#1C3C50] font-medium text-5xl
           phone:max-tablet-portrait:text-xl
           `}>
           Menos Conversinha,
-        </div>
+        </h2>
 
         {/* Mais conversão div */}
-        <div className={'mt-[-0.5rem] relative'}>
+        <h1 className={'mt-[-0.5rem] relative'}>
           {/* Text */}
           <span className={`
           bg-gradient-to-br from-[#2c83fb] to-[#1f76f0] text-transparent bg-clip-text text-[5rem] font-bold
@@ -60,7 +60,7 @@ function Banner(): JSX.Element {
             min-[0px]:max-[320px]:-top-[0.1rem] min-[0px]:max-[320px]:left-[90%]
             `}
           />
-        </div>
+        </h1>
 
         {/* Final text - Strategies */}
         <div className={
@@ -70,9 +70,9 @@ function Banner(): JSX.Element {
           tablet-landscape:w-fit
           desktop:text-base
           `}>
-            <div className="tablet-portrait:w-[80%] tablet-portrait:m-auto tablet-landscape:w-full">
+            <p className="tablet-portrait:w-[80%] tablet-portrait:m-auto tablet-landscape:w-full">
               Conheça as estratégias que <span className='font-extrabold tablet-portrait:text-[1.1rem]'>mudaram o jogo</span> e como aplicá-las no seu negócio
-            </div>
+            </p>
         </div>
       </div>
     </section>
