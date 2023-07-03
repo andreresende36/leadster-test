@@ -16,7 +16,6 @@ const Header = () => (
       height={42}
       className="phone:max-tablet-portrait:scale-[0.65]"
     />
-    <title>Leadster: Chatbot de Marketing para Aumentar Geração de Leads</title>
   </header>
 );
 
