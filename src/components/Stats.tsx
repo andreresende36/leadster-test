@@ -3,7 +3,6 @@ import Link from "next/link";
 import { links } from "../../public/links";
 
 function Stats() {
-  const styleButton = 'btn rounded-full bg-[#0083FF] border-0 text-white font-semibold px-8 py-[1.5rem] w-fit h-fit shadow-md hover:bg-[#0077e7]'
   return (
     <section
       className={`
@@ -114,9 +113,12 @@ function Stats() {
             height={16}
             className="w-fit h-fit"
           />
+
           <p className="font-medium pr-3 border-r-2 border-[#15364a98]">
-            <span className="font-bold">Não</span> é necessário Cartão de Crédito
+            <span className="font-bold">Não</span> é necessário Cartão de
+            Crédito
           </p>
+
           <Image
             src="/rating.webp"
             alt="Nota de avaliação"
@@ -124,6 +126,7 @@ function Stats() {
             height={16}
             className="pl-2 pr-1 object-contain"
           />
+
           <p className="font-medium">
             <span className="font-bold">4.9/5</span> média de satisfação
           </p>

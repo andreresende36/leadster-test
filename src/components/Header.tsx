@@ -10,7 +10,7 @@ const Header = () => (
     desktop:h-[7rem]
     `}>
     <Link href={links.home}>
-      <Image src="/logo.png" alt="Leadster Logo" width={194} height={42} />
+      <Image src="/logo.png" alt="Leadster Logo" width={194} height={42} className="phone:max-tablet-portrait:scale-[0.65]"/>
     </Link>
   </header>
 );

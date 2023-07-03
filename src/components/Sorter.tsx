@@ -20,13 +20,13 @@ function Sorter() {
       <select
         name="sort"
         id="sort"
-        className="font-bold border-[0.1rem] border-[#21465e] p-2 rounded-lg"
+        className="font-bold border-[0.1rem] border-[#21465e] p-2 rounded-lg phone:max-tablet-portrait:scale-75 phone:max-tablet-portrait:w-56"
         onChange={handleChange}
       >
-        <option value="date" className={selectedSort === "date" ? "font-bold" : ""}>
+        <option value="date" className={`phone:text-sm phone:text-center ${selectedSort === "date" ? "font-bold" : ""}`}>
           Data da publicação
         </option>
-        <option value="title" className={selectedSort === "title" ? "font-bold" : ""}>
+        <option value="title" className={`phone:text-sm phone:text-center ${selectedSort === "title" ? "font-bold" : ""}`}>
           Título
         </option>
       </select>

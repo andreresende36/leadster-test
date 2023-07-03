@@ -9,7 +9,14 @@ module.exports = {
     fontFamily: {
       sans: ['Plus Jakarta Sans', 'sans-serif'],
       serif: ['Georgia', 'serif'],
-    }
+    },
+    screens: {
+      'phone': '0px',
+      'tablet-portrait': '600px',
+      'tablet-landscape': '900px',
+      'desktop': '1200px',
+      'big-desktop': '1800px',
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
