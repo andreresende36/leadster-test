@@ -9,23 +9,7 @@ module.exports = {
     fontFamily: {
       sans: ['Plus Jakarta Sans', 'sans-serif'],
       serif: ['Georgia', 'serif'],
-    },
-    screens: {
-      'phone': '0px',
-      // => @media (min-width: 0px) { ... }
-
-      'tablet-portrait': '600px',
-      // => @media (min-width: 600px) { ... }
-      
-      'tablet-landscape': '900px',
-      // => @media (min-width: 900px) { ... }
-
-      'desktop': '1200px',
-      // => @media (min-width: 1200px) { ... }
-
-      'big-desktop': '1800px',
-      // => @media (min-width: 1800px) { ... }
-    },
+    }
   },
   plugins: [require("daisyui")],
   daisyui: {

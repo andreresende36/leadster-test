@@ -12,16 +12,14 @@ import "swiper/css";
 import { SortTypes } from "@/types/sortTypes";
 import { BasicVideoInfo } from "@/types/videoInfo";
 import { compareTitle } from "@/utils/compare";
-import { calculateVideosPerPage } from "@/utils/calculateVideosPerPage";
 
 function VideosSection() {
   const { videos } = useVideoContext();
   const [localVideos, setLocalVideos] = useState<BasicVideoInfo[]>([]);
   const { selectedSort } = useSortContext();
   const { selectedFilter } = useFilterContext();
-  const [screenWidth, setScreenWidth] = useState(0);
 
-  const [videosPerPage, setVideosPerPage] = useState<number>(0);
+  const [videosPerPage] = useState<number>(12);
   const totalPages = Math.ceil(localVideos.length / videosPerPage);
 
   useEffect(() => {
@@ -33,31 +31,18 @@ function VideosSection() {
     const sortVideos = (sort: SortTypes) => {
       const filteredVideos = filterVideos(selectedFilter);
       if (sort === "date") {
-        return filteredVideos
-          .slice()
-          .sort(
-            (a, b) =>
-              new Date(b.publishedAt).getTime() -
-              new Date(a.publishedAt).getTime()
-          );
+        return filteredVideos.slice().sort(
+          (a, b) =>
+            new Date(b.publishedAt).getTime() -
+            new Date(a.publishedAt).getTime()
+        );
       }
       return filteredVideos.slice().sort(compareTitle);
     };
 
     const sortedVideos = sortVideos(selectedSort);
     setLocalVideos(sortedVideos);
-
-    //Manage state screenwidth
-    function handleResize() {
-      setScreenWidth(window.innerWidth);
-    }
-    window.addEventListener("resize", handleResize);
-    setScreenWidth(window.innerWidth);
-    setVideosPerPage(calculateVideosPerPage(screenWidth));
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [videos, selectedFilter, selectedSort, screenWidth]);
+  }, [videos, selectedFilter, selectedSort]);
 
   const distributeVideosByPage = (pageNumber: number) => {
     return (
@@ -72,10 +57,7 @@ function VideosSection() {
   };
 
   const generateSlides = (totalPages: number) => {
-    const pageNumbers = Array.from(
-      { length: totalPages },
-      (_, index) => index + 1
-    );
+    const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
     return pageNumbers.map((pageNumber) => distributeVideosByPage(pageNumber));
   };
 
@@ -103,11 +85,7 @@ function VideosSection() {
         <Filters />
         <Sorter />
       </div>
-      <Swiper
-        pagination={pagination}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
+      <Swiper pagination={pagination} modules={[Pagination]} className="mySwiper">
         {generateSlides(totalPages)}
       </Swiper>
     </section>

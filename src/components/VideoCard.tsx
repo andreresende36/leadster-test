@@ -144,7 +144,7 @@ function VideoCard({
               </button>
 
               {/* Title */}
-              <p className="w-[70%] py-5 font-bold text-xl phone:max-tablet-portrait:text-base phone:max-tablet-portrait:w-[90%] phone:max-tablet-portrait:pt-7">{title}</p>
+              <p className="w-[70%] py-5 font-bold text-xl">{title}</p>
 
               {/* Video frame */}
                 {/* Phone view */}
@@ -157,19 +157,18 @@ function VideoCard({
                   <Youtube videoId={videoId} opts={opts} />
                 </Dialog.Panel>
 
-
               {/* Description Headline */}
-              <p className="w-[93%] text-start font-bold border-b-2 border-neutral-200 pb-[0.4rem] pt-4 text-[#15364a] phone:text-sm">
+              <p className="w-[93%] text-start font-bold border-b-2 border-neutral-200 pb-[0.4rem] pt-4 text-[#15364a]">
                 Descrição
               </p>
 
               {/* Description content */}
-              <p className="w-[93%] h-fit text-base text-justify font-medium pt-[0.4rem] text-[#15364a] phone:text-sm">
+              <p className="w-[93%] h-fit text-base text-justify font-medium pt-[0.4rem] text-[#15364a]">
                 {description}
               </p>
 
               {/* Downloads Headline */}
-              <p className="w-[93%] text-start font-bold border-b-2 border-neutral-200 pb-[0.4rem] pt-4 text-[#15364a] phone:text-sm">
+              <p className="w-[93%] text-start font-bold border-b-2 border-neutral-200 pb-[0.4rem] pt-4 text-[#15364a]">
                 Downloads
               </p>
 

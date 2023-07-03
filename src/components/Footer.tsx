@@ -27,12 +27,11 @@ function Footer() {
     <footer
       className={`
       h-fit
-      flex flex-col items-center
-      phone:max-tablet-portrait:items-start gap-9 phone:max-tablet-portrait:min-w-0 phone:max-tablet-portrait:w-[85%] phone:max-tablet-portrait:m-auto
+      flex flex-col items-center gap-9
       text-[#15364A] pt-12
       `}
     >
-      <div className="w-full flex flex-col items-center justify-center phone:max-tablet-portrait:items-start">
+      <div className="w-full flex flex-col items-center justify-center">
         <Link href={home}>
           <Image
             src="/leadster_270.gif"
@@ -130,7 +129,7 @@ function Footer() {
               Leadster
             </Link>
           </p>
-          <p className="text-end phone:max-tablet-portrait:text-center">
+          <p className="text-end">
             Rua José Loureiro, 464 - Centro - Curitiba PR - CEP:80010-000 |{" "}
             <Link
               href={termosDeUso}

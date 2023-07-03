@@ -17,6 +17,7 @@ function FilterButton({ text }: { text: Filters }) {
 
   const activeStyles = `bg-[#007EFF] border-[#007EFF] font-extrabold text-[#FFFFFF] hover:bg-[#007EFF] hover:text-[#FFFFFF] hover:border-[#007EFF]`;
   const inactiveStyles = `hover:border-[#007EFF] hover:text-[#007EFF] border-[#21465e]`;
+<<<<<<< HEAD
   const buttonClass = `
     btn normal-case rounded-full w-fit h-fit
     whitespace-nowrap transition duration-200 border-[0.1rem] 
@@ -28,6 +29,9 @@ function FilterButton({ text }: { text: Filters }) {
     desktop:px-6 desktop:py-4 desktop:text-[1.05rem]
     big-desktop:h-fit big-desktop:px-5 big-desktop:py-2 big-desktop:text-[0.98rem]
     `;
+=======
+  const buttonClass = `btn normal-case rounded-full px-5 py-2 w-fit h-fit whitespace-nowrap transition duration-200 border-[0.1rem] font-semibold text-[0.98rem] ${active ? activeStyles : inactiveStyles}`;
+>>>>>>> c5ae8d581e14bb6c0536d2322e76de41cfcab2db
 
   return (
     <button className={buttonClass} onClick={handleClick}>
