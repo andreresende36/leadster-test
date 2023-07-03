@@ -1,13 +1,13 @@
 # Página de vídeos da Leadster
 <p align="center"><img src="https://imgur.com/70N1ZFu.gif" /></p>
 
-Página desenvolvida como um teste para concorrer a vaga de desenvolvedor Front-end na Leadster. Permaneci bastante engajado bastante durante o projeto buscando sempre seguir as orientações de conteúdo e layout que me foram passados, bem como colocar alguns adicionais que julguei ainda melhores para o design e experiência do usuário.
+Página desenvolvida como um teste para concorrer a vaga de desenvolvedor Front-end na Leadster. Permaneci bastante engajado bastante durante o projeto buscando sempre seguir as orientações de conteúdo e layout que me foram passados, bem como adicionar alguns elementos que julguei pertinentes para agregar ao design e experiência do usuário.
 
-A página, apesar de ser simples, conta com algumas funcionalidades bem legais, como:
+A página, apesar de ser simples, conta com algumas funcionalidades interessantes, como:
 
 - Filtrar o vídeo pela categoria do mesmo;
-- Ordenar por data da publicação (do mais recente para o mais antigo) e título(ordem alfabética);
-- O card do vídeo abre uma caixa de diálogo com o vídeo do Youtube, assim o usuário não precisa deixar a página da Leadster para ver o vídeo. Outro função que essa caixa de diálogo apresenta são 3 botôes para dwonload de arquivos relacionados ao vídeo.
+- Ordenar por data da publicação (do mais recente para o mais antigo) e título (ordem alfabética);
+- O card do vídeo abre uma caixa de diálogo com o vídeo do Youtube, assim o usuário não precisa deixar a página da Leadster para ver o vídeo. Outra função que essa caixa de diálogo apresenta são 3 botôes para download de arquivos relacionados ao vídeo.
 
 Outro detalhe é que todos os dados dos vídeos foram retirados da própria API do Youtube usando a ID do canal da Leadster. Os dados foram salvos em um arquivo JSON para que a aplicação pudesse acessá-lo facilmente.
 Os links encontrados em botões, imagens, ícones de redes sociais e no rodapé levam para o site oficial da Leadster (www.leadster.com.br).
@@ -58,20 +58,21 @@ https://leadster-test-lemon.vercel.app/
 
 Dividi a realização do projeto nos passos abaixo:
 
-- Desenho e organizações dos componentes principais (Header, Banner, VideosSection, Stats e Footer) num papel. Essa etapa foi importante para que eu pudesse ter uma visão macro da aplicação e para decidir as melhores tags, garantindo uma melhor semântica no HTML;
-- Depois coloquei tudo no arquivo index.tsx para que eu pudesse ver na tela somente o esqueleto daquilo que tinha projetado no papel;
-- Comecei a implementar a página e seus componentes de cima para baixo;
-- A implementação dos cards de vídeo e da seção completa dos vídeos demandou mais lógica e tempo, já que conta com filtros, ordenação e uma caixa de diálogo que abre ao se clicar num dos cards. Outro detalhe aqui é que resolvi puxar os dados de alguns vídeos do canal da Leadster. Assim, busquei os dados na API, salvei num arquivo JSON, extraí (através de uma função) apenas os dados necessários para a aplicação e assim pude gerar na tela 40 cards com imgens, textos e vídeos diferentes;
-- No footer segui basicamente o modelo com a adição de todos os links reais da Leadster. Os links também foram salvos em um arquivo no formato JSON.
+- Desenho e organização dos componentes principais (Header, Banner, VideosSection, Stats e Footer) num papel. Essa etapa foi importante para que eu pudesse ter uma visão macro da aplicação e para decidir as melhores tags, garantindo uma melhor semântica HTML;
+- Depois inseri as tags selecionadas no passo acima no arquivo index.tsx para que eu pudesse ver em tela o esqueleto daquilo que tinha projetado no papel;
+- Comecei a implementação da página e seus componentes de cima para baixo;
+- A implementação dos cards de vídeo e da seção completa dos vídeos demandou mais lógica e tempo, já que conta com filtros, ordenação e uma caixa de diálogo que abre ao se clicar num dos cards. Outro detalhe aqui é que resolvi puxar os dados de alguns vídeos do canal da Leadster. Assim, busquei os dados na API do Youtube, salvei num arquivo JSON, extraí (através de uma função) apenas os dados necessários para a aplicação e assim pude gerar na tela 40 cards com imgens, textos e vídeos diferentes;
+- No footer segui basicamente o layout modelo com a adição de todos os links reais da Leadster. Os links também foram salvos em um arquivo no formato JSON na pasta /public.
 
 #### 2. Como organizei meu código:
 
-Além da pasta public (nativa do Next.js) que utilizei para salvar as imagens e dados de links e dos vídeos, meu código ficou todo dentro da pasta src conforme imagem abaixo:
+Além da pasta public (nativa do Next.js) que utilizei para salvar as imagens e dados de links e dos vídeos, o código-fonte da minha aplicação foi salvo dentro da pasta src conforme imagem abaixo:
 
 - Pasta **/src**
+  <br />
   ![Tree](https://imgur.com/KL0TpLL.png)
 
-É importante ressaltar aqui que os componentes que criei servem a três propósitos: organização, reusabilidade e extensibilidade. Optei também por utilizar Context para que tanto a consulta quanto a edição desse estado global pudesse estar disponível para toda a aplicação. Por fim, o uso de types (na pasta types) se fez necessário para garantir a integridade de toda a aplicação, já que os dados passados aos componentes e funcões estão todos devidamente tipados.
+É importante ressaltar aqui que os componentes que criei servem a três propósitos: organização, reusabilidade e extensibilidade. Optei também por utilizar Context para que tanto a consulta quanto a edição desse estado global pudesse estar disponível para toda a aplicação. Por fim, o uso de types (na pasta types) se fez necessário para garantir a integridade de toda a aplicação, já que os dados passados aos componentes e funções estão todos devidamente tipados.
 
 #### 3. Como rodar o projeto:
 
@@ -83,11 +84,11 @@ Porém, caso queira fazer o download do repositório para sua máquina e execut�
 
   ```
   git clone https://github.com/andreresende36/leadster-test.git
-  cd [NOME-DA-SUA-PASTA]
+  cd leadster-test/
   npm install
   ```
 
-- A partir desse momento seu computador irá instalar todas as dependências necessárias para rodar a aplicação. Após a finalização dessa etapa virá executará o seguinte comando:
+- A partir desse momento seu computador irá instalar todas as dependências necessárias para rodar a aplicação. Após a finalização dessa etapa você executará o seguinte comando:
   ```
   npm run dev
   ```
