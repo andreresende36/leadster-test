@@ -7,16 +7,10 @@ import { VideoProvider } from "@/context/VideoContext";
 import { FilterProvider } from "@/context/FilterContext";
 import { SortProvider } from "@/context/SortContext";
 import VideosSection from "@/components/VideosSection";
-import Head from "next/head";
+
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Leadster: Chatbot de Marketing para Aumentar Geração de Leads</title>
-        <meta name="description" content="Conheça a Leadster, um Chatbot de Marketing Conversacional para Aumentar a Geração de Leads Qualificados no seu Site. Visite e saiba mais!" />
-        <link rel="canonical" href="https://leadster-test-lemon.vercel.app/" />
-        <meta name="viewport" content="width=device-width" />
-      </Head>
       <VideoProvider>
         <PageProvider>
           <FilterProvider>
