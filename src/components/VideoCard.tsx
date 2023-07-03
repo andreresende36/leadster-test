@@ -43,7 +43,6 @@ function VideoCard({
         duration-400 hover:text-[#007EFF] ease-in-out hover:scale-[1.007] 
         m-2 
         phone:max-tablet-portrait:m-0 phone:max-tablet-portrait:scale-[0.9] phone:max-tablet-portrait:hover:scale-[0.9063]
-        
         `}
         onClick={() => {
           setModalOpen(true);
@@ -113,8 +112,8 @@ function VideoCard({
           {/* Modal dialog */}
           <Transition.Child
             className={`fixed inset-0 z-10 flex p-6 
-            phone:max-tablet-portrait:p-0 phone:max-tablet-portrait:flex 
-            phone:max-tablet-portrait:justify-center phone:max-tablet-portrait:items-center`}
+            phone:max-tablet-landscape:p-0 phone:max-tablet-landscape:flex 
+            phone:max-tablet-landscape:justify-center phone:max-tablet-landscape:items-center`}
             enter="transition ease-out duration-300"
             enterFrom="opacity-0 scale-75"
             enterTo="opacity-100 scale-100"
@@ -124,10 +123,11 @@ function VideoCard({
           >
             {/* Modal block */}
             <div className={`
-              relative max-w-5xl mx-auto w-[40rem] h-fit 
+              relative max-w-5xl mx-auto w-[40rem] h-fit
               flex flex-col items-center text-center bg-white border-t-[5px] 
               border-[#007EFF] rounded-2xl 
-              phone:max-tablet-portrait:w-[92%]`}>
+              phone:max-tablet-portrait:w-[92%]
+              `}>
               {/* Close button */}
               <button onClick={() => setModalOpen(false)}>
                 <IconsMd.MdClose

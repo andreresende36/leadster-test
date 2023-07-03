@@ -9,10 +9,10 @@ function Sorter() {
   return (
     <div className={`
       w-[30%] flex justify-end items-center gap-4
-      phone:w-fit phone:max-tablet-portrait:mt-3 phone:flex-col phone:gap-0
+      phone:max-desktop:w-fit phone:max-tablet-portrait:mt-3 phone:max-big-desktop:flex-col phone:max-big-desktop:gap-0
       tablet-portrait:w-[30%] tablet-portrait:h-full 
       tablet-landscape:w-[30%]
-      desktop:w-[30%]
+      desktop:w-[15%]
       big-desktop:w-[30%]
       `}>
       

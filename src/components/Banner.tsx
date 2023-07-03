@@ -7,42 +7,33 @@ function Banner(): JSX.Element {
       flex bg-[#F0F8FF] w-[100%] justify-center items-center
       phone:h-fit phone:py-8
       tablet-portrait:h-[26rem]
-      desktop:h-[36rem]
-      big-desktop:h-[36rem]
+      desktop:h-[28rem]
+      big-desktop:h-[34rem]
       `}>
 
       {/* Texts div */}
       <div className={`
-      flex flex-col items-center text-center
-      phone:w-[90%]
-      tablet-portrait:w-full
-      tablet-landscape:w-full
-      desktop:w-full
-      big-desktop:w-full
+      flex flex-col items-center text-center w-full
+      phone:max-tablet-portrait:w-[90%]
       `}>
 
         {/* Webinars */}
         <div className={`
-        uppercase flex justify-center items-center 
+        uppercase flex justify-center items-center w-[12.5rem] h-[2rem] text-sm mb-4
         rounded-tl-3xl rounded-bl-lg rounded-r-3xl font-extrabold 
         text-[#2383fb] border-[#2383fb] border-[0.15rem]
-        phone:w-[10rem] phone:h-[1.6rem] phone:text-xs phone:mb-1
-        tablet-portrait:w-[12.5rem] tablet-portrait:h-[2rem] tablet-portrait:text-sm tablet-portrait:mb-4
-        tablet-landscape:w-[12.5rem] tablet-landscape:h-[2rem] tablet-landscape:text-sm tablet-landscape:mb-4
-        desktop:w-[12.5rem] desktop:h-[2rem] desktop:text-sm desktop:mb-4
-        big-desktop:w-[12.5rem] big-desktop:h-[2rem] big-desktop:text-sm big-desktop:mb-4
+        phone:max-tablet-portrait:w-[10rem] 
+        phone:max-tablet-portrait:h-[1.6rem] 
+        phone:max-tablet-portrait:text-xs 
+        phone:max-tablet-portrait:mb-1
         `}>
           Webinars Exclusivos
         </div>
 
         {/* Menos conversinha */}
         <div className={`
-          text-[#1C3C50] font-medium
-          phone:text-xl
-          tablet-portrait:text-5xl
-          tablet-landscape:text-5xl
-          desktop:text-5xl
-          big-desktop:text-5xl
+          text-[#1C3C50] font-medium text-5xl
+          phone:max-tablet-portrait:text-xl
           `}>
           Menos Conversinha,
         </div>
@@ -52,12 +43,8 @@ function Banner(): JSX.Element {
           {/* Text */}
           <span className={`
           bg-gradient-to-br from-[#2c83fb] to-[#1f76f0] text-transparent bg-clip-text text-[5rem] font-bold
-          phone:text-[2.5rem]
+          phone:max-tablet-portrait:text-[2.5rem]
           min-[0px]:max-[320px]:text-[2.2rem]
-          tablet-portrait:text-[5rem]
-          tablet-landscape:text-[5rem]
-          desktop:text-[5rem]
-          big-desktop:text-[5rem]
           `}>
             Mais Conversão
           </span>
@@ -68,27 +55,22 @@ function Banner(): JSX.Element {
             width={49}
             height={32}
             className={`
-            absolute
-            phone:scale-[0.60] phone:top-[0.1rem] phone:left-[91.5%]
+            absolute scale-100 top-[1.4rem] left-[95%]
+            phone:max-tablet-portrait:scale-[0.60] phone:max-tablet-portrait:top-[0.1rem] phone:max-tablet-portrait:left-[91.5%]
             min-[0px]:max-[320px]:-top-[0.1rem] min-[0px]:max-[320px]:left-[90%]
-            tablet-portrait:scale-100 tablet-portrait:top-[1.4rem] tablet-portrait:left-[95%]
-            tablet-landscape:scale-100 tablet-landscape:top-[1.4rem] tablet-landscape:left-[95%]
-            desktop:scale-100 desktop:top-[1.4rem] desktop:left-[95%]
-            big-desktop:scale-100 big-desktop:top-[1.4rem] big-desktop:left-[95%]
             `}
           />
         </div>
 
         {/* Final text - Strategies */}
         <div className={
-          `text-[#1C3C50] font-semibold text-center border-t-2 border-[#D7E2EA] w-[108%]
-          phone:text-xs phone:p-2 phone:max-tablet-portrait:w-fit
-          tablet-portrait:text-lg tablet-portrait:p-4 tablet-portrait:w-[80%]
-          tablet-landscape:text-base tablet-landscape:p-4
-          desktop:text-base desktop:p-4
-          big-desktop:text-base big-desktop:p-4
+          `text-[#1C3C50] font-semibold text-center border-t-2 border-[#D7E2EA] w-[108%] p-4
+          phone:text-xs phone:max-tablet-portrait:p-2 phone:max-tablet-portrait:w-fit
+          tablet-portrait:text-lg tablet-portrait:w-[80%]
+          tablet-landscape:w-fit
+          desktop:text-base
           `}>
-            <div className="tablet-portrait:w-[80%] tablet-portrait:m-auto">
+            <div className="tablet-portrait:w-[80%] tablet-portrait:m-auto tablet-landscape:w-full">
               Conheça as estratégias que <span className='font-extrabold tablet-portrait:text-[1.1rem]'>mudaram o jogo</span> e como aplicá-las no seu negócio
             </div>
         </div>

@@ -15,12 +15,10 @@ function Filters() {
 
   return (
     <div className={`
-      flex gap-5 flex-wrap w-[70%]
-      phone:gap-2 phone:justify-center phone:max-tablet-portrait:w-fit
-      tablet-portrait:gap-3
-      tablet-landscape:
-      desktop:
-      big-desktop:
+      flex gap-3 flex-wrap w-[70%]
+      phone:max-tablet-portrait:gap-2 phone:max-tablet-portrait:gap-x-6 phone:justify-center phone:max-tablet-portrait:w-fit
+      desktop:w-[77%]
+      big-desktop:justify-start big-desktop:gap-4
       `}>
       {categories.map((category) => (
         <FilterButton text={category} key={category} />

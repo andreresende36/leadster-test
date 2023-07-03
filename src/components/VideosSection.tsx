@@ -88,22 +88,17 @@ function VideosSection() {
 
   return (
     <section className={`
-      h-fit m-auto flex flex-col
-      phone:w-full
-      tablet-portrait:w-[98%] tablet-portrait:pt-2
-      tablet-landscape:w-[80%]
-      desktop:w-[80%]
-      big-desktop:w-[80%]
+      h-fit m-auto flex flex-col w-full tablet-portrait:pt-2
+      big-desktop:w-[70%]
       `}>
       <div className={`
         flex justify-around items-center mt-20 pb-5 
         border-b-[2.5px] border-[#DCDFE2]
-        phone:flex-col phone:max-tablet-portrait:w-[85%]
+        phone:max-tablet-portrait:flex-col phone:max-tablet-portrait:w-[85%]
         phone:m-auto phone:max-tablet-portrait:mt-4
-        tablet-portrait:w-[90%] tablet-portrait:mt-6 tablet-portrait:flex-row
-        tablet-landscape:flex-row 
-        desktop:mt-20 desktop:flex-row 
-        big-desktop:mt-20 big-desktop:flex-row 
+        tablet-portrait:w-[96%] tablet-portrait:mt-6
+        desktop:mt-2
+        big-desktop:mt-4 big-desktop:w-[84%]
         `}>
         <Filters />
         <Sorter />
