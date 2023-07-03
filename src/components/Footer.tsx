@@ -121,7 +121,7 @@ function Footer() {
       </div>
       <div className="w-full gap-16 font-semibold text-sm tablet-portrait:max-tablet-landscape:text-xs border-t-2 text-[#15364a80] py-8 mt-12 phone:max-desktop:mt-0 phone:max-desktop:py-3 tablet-portrait:max-desktop:pb-5">
         <div className="w-[80%] flex justify-between m-auto phone:max-tablet-portrait:w-full phone:max-desktop:flex-col tablet-portrait:max-desktop:items-center tablet-portrait:max-desktop:text-sm desktop:w-[85%] big-desktop:w-[50%]">
-          <span className="phone:max-tablet-portrait:text-center">
+          <p className="phone:max-tablet-portrait:text-center">
             Copyright © 2015 - 2022 Todos os direitos reservados |{" "}
             <Link
               href={home}
@@ -129,8 +129,8 @@ function Footer() {
             >
               Leadster
             </Link>
-          </span>
-          <span className="text-end phone:max-tablet-portrait:text-center">
+          </p>
+          <p className="text-end phone:max-tablet-portrait:text-center">
             Rua José Loureiro, 464 - Centro - Curitiba PR - CEP:80010-000 |{" "}
             <Link
               href={termosDeUso}
@@ -145,7 +145,7 @@ function Footer() {
             >
               Privacidade
             </Link>
-          </span>
+          </p>
         </div>
       </div>
     </footer>
