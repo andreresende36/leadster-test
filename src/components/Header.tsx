@@ -10,7 +10,7 @@ const Header = () => (
     `}
   >
     <Image
-      src="/logo.png"
+      src="/imgs/logo.png"
       alt="Leadster Logo"
       width={194}
       height={42}

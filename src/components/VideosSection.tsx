@@ -9,14 +9,15 @@ import { useSortContext } from "@/context/SortContext";
 import { useFilterContext } from "@/context/FilterContext";
 
 import "swiper/css";
-import { SortTypes } from "@/types/sortTypes";
-import { BasicVideoInfo } from "@/types/videoInfo";
+import SortTypes from "@/types/SortTypes";
+import { BasicVideoInfoTypes } from "@/types/VideoInfoTypes";
+import FilterTypes from '../types/FilterTypes'
 import { compareTitle } from "@/utils/compare";
 import { calculateVideosPerPage } from "@/utils/calculateVideosPerPage";
 
 function VideosSection() {
   const { videos } = useVideoContext();
-  const [localVideos, setLocalVideos] = useState<BasicVideoInfo[]>([]);
+  const [localVideos, setLocalVideos] = useState<BasicVideoInfoTypes[]>([]);
   const { selectedSort } = useSortContext();
   const { selectedFilter } = useFilterContext();
   const [screenWidth, setScreenWidth] = useState(0);
@@ -25,7 +26,7 @@ function VideosSection() {
   const totalPages = Math.ceil(localVideos.length / videosPerPage);
 
   useEffect(() => {
-    const filterVideos = (filter: Filters) => {
+    const filterVideos = (filter: FilterTypes) => {
       if (filter === "Todos") return videos;
       return videos.filter((video) => video.category === filter);
     };

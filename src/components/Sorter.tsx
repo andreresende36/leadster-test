@@ -1,5 +1,5 @@
 import { useSortContext } from "@/context/SortContext";
-import { SortTypes } from "@/types/sortTypes";
+import SortTypes from "@/types/SortTypes";
 
 function Sorter() {
   const { selectedSort, setSelectedSort } = useSortContext();

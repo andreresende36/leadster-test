@@ -1,6 +1,6 @@
-import { FullVideoInfo, BasicVideoInfo } from "@/types/videoInfo"
+import { FullVideoInfoTypes, BasicVideoInfoTypes } from "@/types/VideoInfoTypes"
 
-const videos: FullVideoInfo[] = [
+const videos: FullVideoInfoTypes[] = [
   {
     "kind": "youtube#searchResult",
     "etag": "TVBiMO2puQhRw7CI07HyAHa0ej4",
@@ -1403,7 +1403,7 @@ const videos: FullVideoInfo[] = [
   }
 ]
 
-const extractMainData = (videosFullData: FullVideoInfo[]): BasicVideoInfo[] => {
+const extractMainData = (videosFullData: FullVideoInfoTypes[]): BasicVideoInfoTypes[] => {
   const extractedData = videosFullData.map((video) => {
     return {
       id: video.id.videoId,

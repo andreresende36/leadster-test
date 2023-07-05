@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { links } from "../../public/links";
+import { links } from "../db/links";
 
 function Stats() {
   return (
@@ -18,7 +18,7 @@ function Stats() {
       tablet-portrait:max-desktop:w-[60%] tablet-portrait:max-desktop:ml-10
       `}>
         <Image
-          src="/comparativo.png"
+          src="/imgs/comparativo.png"
           alt="Comparativo captações de leads"
           width={739}
           height={687}
@@ -56,7 +56,7 @@ function Stats() {
             </button>
           </Link>
           <Image
-            src="/selo_RD.png"
+            src="/imgs/selo_RD.png"
             alt="Selo RD Station"
             width={205}
             height={73}
@@ -69,7 +69,7 @@ function Stats() {
           hidden phone:max-desktop:flex mt-4 phone:max-tablet-portrait:justify-around phone:max-tablet-portrait:items-center phone:max-desktop:w-[92%] 
           tablet-portrait:max-desktop:w-full tablet-portrait:max-desktop:gap-3 tablet-portrait:max-desktop:-ml-10 tablet-portrait:max-desktop:pt-2`}>
           <Image
-            src="/selo_RD.png"
+            src="/imgs/selo_RD.png"
             alt="Selo RD Station"
             width={205}
             height={73}
@@ -77,7 +77,7 @@ function Stats() {
           />
           <div className="flex flex-col justify-center items-center tablet-portrait:max-desktop:gap-1">
             <Image
-              src="/card.webp"
+              src="/imgs/card.webp"
               alt="Cartão de crédito"
               width={16}
               height={16}
@@ -93,7 +93,7 @@ function Stats() {
           `hidden phone:max-desktop:flex phone:max-desktop:flex-col phone:max-desktop:gap-3 phone:max-desktop:my-4 phone:max-desktop:w-[92%] 
           phone:max-desktop:justify-center phone:max-desktop:items-center phone:max-tablet-portrait:ml-4 tablet-portrait:max-desktop:-ml-8 max-desktop:pt-2 tablet-landscape:max-desktop:-ml-24`}>
           <Image
-            src="/rating.webp"
+            src="/imgs/rating.webp"
             alt="Nota de avaliação"
             width={92}
             height={16}
@@ -107,7 +107,7 @@ function Stats() {
         {/* Other devices */}
         <div className="w-full flex items-center mt-2 gap-1 text-[0.8rem] max-h-5 phone:max-desktop:hidden">
           <Image
-            src="/card.webp"
+            src="/imgs/card.webp"
             alt="Cartão de crédito"
             width={16}
             height={16}
@@ -120,7 +120,7 @@ function Stats() {
           </p>
 
           <Image
-            src="/rating.webp"
+            src="/imgs/rating.webp"
             alt="Nota de avaliação"
             width={92}
             height={16}

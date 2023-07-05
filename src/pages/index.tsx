@@ -21,8 +21,8 @@ export default function Home() {
                   Leadster: Chatbot de Marketing para Aumentar Geração de Leads
                 </title>
               </Head>
+              <Header />
               <main>
-                <Header />
                 <Banner />
                 <VideosSection />
                 <Stats />

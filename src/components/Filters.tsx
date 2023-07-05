@@ -1,15 +1,15 @@
 import FilterButton from './FilterButton';
-import videoData from "../../public/leadster-yt-database";
+import videoData from "../db/leadster-yt-database";
 import { useEffect, useState } from "react";
-import { Filters } from "@/types/filterTypes";
+import FilterTypes from "@/types/FilterTypes";
 import { compareCategories } from '@/utils/compare';
 
 function Filters() {
-  const [categories, setCategories] = useState<Filters[]>([]);
+  const [categories, setCategories] = useState<FilterTypes[]>([]);
 
   useEffect(() => {
     const uniqueCategories = Array.from(new Set(videoData.map((video) => video.category)));
-    const sortedCategories = [...uniqueCategories, 'Todos'].sort(compareCategories) as Filters[];
+    const sortedCategories = [...uniqueCategories, 'Todos'].sort(compareCategories) as FilterTypes[];
     setCategories(sortedCategories);
   }, []);
 
