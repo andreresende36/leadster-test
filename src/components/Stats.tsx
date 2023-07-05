@@ -66,16 +66,16 @@ function Stats() {
 
         {/* Phone/Tablet Portrait/Tablet Landscape view */}
         <div className={`
-          hidden phone:max-desktop:flex mt-4 phone:max-tablet-portrait:justify-around phone:max-tablet-portrait:items-center phone:max-desktop:w-[92%] 
+          hidden phone:max-desktop:flex mt-4 phone:max-tablet-portrait:justify-center phone:max-tablet-portrait:items-center phone:max-desktop:w-[80%] 
           tablet-portrait:max-desktop:w-full tablet-portrait:max-desktop:gap-3 tablet-portrait:max-desktop:-ml-10 tablet-portrait:max-desktop:pt-2`}>
           <Image
             src="/imgs/selo_RD.png"
             alt="Selo RD Station"
             width={205}
             height={73}
-            className="scale-[0.75] tablet-portrait:max-desktop:scale-100 tablet-portrait:max-desktop:w-[11rem]"
+            className="phone:max-tablet-portrait:w-[50%] tablet-portrait:max-desktop:w-[11rem]"
           />
-          <div className="flex flex-col justify-center items-center tablet-portrait:max-desktop:gap-1">
+          <div className="flex flex-col justify-center items-end tablet-portrait:max-desktop:gap-1">
             <Image
               src="/imgs/card.webp"
               alt="Cartão de crédito"
