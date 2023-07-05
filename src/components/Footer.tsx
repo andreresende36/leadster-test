@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import * as Icons from "react-icons/fa";
-import { links } from "../../public/links";
+import { links } from "../db/links";
 function Footer() {
   const {
     home,
@@ -35,7 +35,7 @@ function Footer() {
       <div className="w-full flex flex-col items-center justify-center phone:max-tablet-portrait:items-start">
         <Link href={home}>
           <Image
-            src="/leadster_270.gif"
+            src="/imgs/leadster_270.gif"
             alt="Leadster Logo"
             width={194}
             height={42}

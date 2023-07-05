@@ -50,7 +50,7 @@ function Banner(): JSX.Element {
           </span>
           {/* Leadster Icon */}
           <Image
-            src='/asset-header.png'
+            src='/imgs/asset-header.png'
             alt='Ícone leadster'
             width={49}
             height={32}

@@ -7,10 +7,10 @@ A página, apesar de ser simples, conta com algumas funcionalidades interessante
 
 - Filtrar o vídeo pela categoria do mesmo;
 - Ordenar por data da publicação (do mais recente para o mais antigo) e título (ordem alfabética);
-- O card do vídeo abre uma caixa de diálogo com o vídeo do Youtube, assim o usuário não precisa deixar a página da Leadster para ver o vídeo. Outra função que essa caixa de diálogo apresenta são 3 botôes para download de arquivos relacionados ao vídeo.
+- O card do vídeo abre uma caixa de diálogo com o vídeo do Youtube, assim o usuário não precisa deixar a página da Leadster para ver o vídeo. Outra função que essa caixa de diálogo apresenta são três botões para download de arquivos relacionados ao vídeo.
 
 Outro detalhe é que todos os dados dos vídeos foram retirados da própria API do Youtube usando a ID do canal da Leadster. Os dados foram salvos em um arquivo JSON para que a aplicação pudesse acessá-lo facilmente.
-Os links encontrados em botões, imagens, ícones de redes sociais e no rodapé levam para o site oficial da Leadster (www.leadster.com.br).
+Os links encontrados em botões, imagens, ícones de redes sociais e no rodapé levam para o site oficial da Leadster (http://www.leadster.com.br).
 
 ## Stack
 

@@ -16,8 +16,8 @@ export default function Document() {
         />
         <link rel="canonical" href="https://leadster-test-lemon.vercel.app/" />
         <meta name="description" content="Conheça a Leadster, um Chatbot de Marketing Conversacional para Aumentar a Geração de Leads Qualificados no seu Site. Visite e saiba mais!" />
+        <link rel="icon" href="/icons/favicon.ico" />
       </Head>
-      <title>Leadster: Chatbot de Marketing para Aumentar Geração de Leads</title>
       <body>
         <Main />
         <NextScript />

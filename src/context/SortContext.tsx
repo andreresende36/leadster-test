@@ -1,4 +1,4 @@
-import { SortTypes } from '@/types/sortTypes';
+import SortTypes from '@/types/SortTypes';
 import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState, useMemo } from 'react';
 
 type ContextProps = {

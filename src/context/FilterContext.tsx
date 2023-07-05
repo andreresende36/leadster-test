@@ -1,15 +1,15 @@
-import { Filters } from '@/types/filterTypes';
+import FilterTypes from '@/types/FilterTypes';
 import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState, useMemo } from 'react';
 
 type ContextProps = {
-  selectedFilter: Filters;
-  setSelectedFilter: Dispatch<SetStateAction<Filters>>,
+  selectedFilter: FilterTypes;
+  setSelectedFilter: Dispatch<SetStateAction<FilterTypes>>,
 }
 
-const FilterContext = createContext<ContextProps>({ selectedFilter: 'Todos', setSelectedFilter: ():Filters => 'Todos'});
+const FilterContext = createContext<ContextProps>({ selectedFilter: 'Todos', setSelectedFilter: ():FilterTypes => 'Todos'});
 
 export const FilterProvider = ({ children }: { children: ReactNode }) =>   {
-  const [selectedFilter, setSelectedFilter] = useState('Todos' as Filters);
+  const [selectedFilter, setSelectedFilter] = useState('Todos' as FilterTypes);
   const contextValue = useMemo(() => ({ selectedFilter, setSelectedFilter }), [selectedFilter, setSelectedFilter]);
 
   return(

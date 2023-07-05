@@ -1,1 +1,0 @@
-export type Filters = 'Agências' | 'Chatbot' | 'Marketing Digital' | 'Geração de Leads' | 'Mídia Paga' | 'Todos';

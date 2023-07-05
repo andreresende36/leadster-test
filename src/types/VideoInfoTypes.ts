@@ -1,6 +1,6 @@
-import { Filters } from "./filterTypes"
+import FiltersTypes from "./FilterTypes"
 
-type FullVideoInfo = 
+type FullVideoInfoTypes = 
   {
     kind: string,
     etag: string,
@@ -33,11 +33,11 @@ type FullVideoInfo =
       channelTitle: string,
       liveBroadcastContent: string,
       publishTime: string,
-      category: Filters
+      category: FiltersTypes
     }
   }
 
-  type BasicVideoInfo = {
+  type BasicVideoInfoTypes = {
     id: string,
     title: string,
     description: string,
@@ -46,8 +46,8 @@ type FullVideoInfo =
       width: number,
       height: number,
     },
-    category: Filters,
+    category: FiltersTypes,
     publishedAt: string,
   }
 
-  export type { FullVideoInfo, BasicVideoInfo }
+  export type { FullVideoInfoTypes, BasicVideoInfoTypes }

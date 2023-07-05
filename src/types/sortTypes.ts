@@ -1,1 +1,0 @@
-export type SortTypes = 'date' | 'title';

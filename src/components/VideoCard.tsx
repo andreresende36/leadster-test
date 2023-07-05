@@ -1,13 +1,13 @@
 import Image from "next/image";
 import he from "he";
-import { BasicVideoInfo } from "@/types/videoInfo";
+import { BasicVideoInfoTypes } from "@/types/VideoInfoTypes";
 import { useState, useRef, Fragment } from "react";
 import { Transition, Dialog } from "@headlessui/react";
 import Youtube from "react-youtube";
 import * as IconsMd from "react-icons/md";
 import * as IconsIo from "react-icons/io";
 import Link from "next/link";
-import { links } from "../../public/links";
+import { links } from "../db/links";
 
 function VideoCard({
   videoInfo: {
@@ -17,7 +17,7 @@ function VideoCard({
     thumbnail: { url, width, height },
   },
 }: {
-  videoInfo: BasicVideoInfo;
+  videoInfo: BasicVideoInfoTypes;
 }): JSX.Element {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const videoRef = useRef<HTMLVideoElement>(null);

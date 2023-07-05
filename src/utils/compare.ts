@@ -1,6 +1,6 @@
-import { BasicVideoInfo } from "@/types/videoInfo";
+import { BasicVideoInfoTypes } from "@/types/VideoInfoTypes";
 
-export function compareTitle(a: BasicVideoInfo, b: BasicVideoInfo) {
+export function compareTitle(a: BasicVideoInfoTypes, b: BasicVideoInfoTypes) {
   if (a.title < b.title)
     return -1;
   if (a.title > b.title)
