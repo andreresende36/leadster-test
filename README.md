@@ -61,8 +61,8 @@ Dividi a realização do projeto nos passos abaixo:
 - Desenho e organização dos componentes principais (Header, Banner, VideosSection, Stats e Footer) num papel. Essa etapa foi importante para que eu pudesse ter uma visão macro da aplicação e para decidir as melhores tags, garantindo uma melhor semântica HTML;
 - Depois inseri as tags selecionadas no passo acima no arquivo index.tsx para que eu pudesse ver em tela o esqueleto daquilo que tinha projetado no papel;
 - Comecei a implementação da página e seus componentes de cima para baixo;
-- A implementação dos cards de vídeo e da seção completa dos vídeos demandou mais lógica e tempo, já que conta com filtros, ordenação e uma caixa de diálogo que abre ao se clicar num dos cards. Outro detalhe aqui é que resolvi puxar os dados de alguns vídeos do canal da Leadster. Assim, busquei os dados na API do Youtube, salvei num arquivo JSON, extraí (através de uma função) apenas os dados necessários para a aplicação e assim pude gerar na tela 40 cards com imgens, textos e vídeos diferentes;
-- No footer segui basicamente o layout modelo com a adição de todos os links reais da Leadster. Os links também foram salvos em um arquivo no formato JSON na pasta /public.
+- A implementação dos cards de vídeo e da seção completa dos vídeos demandou mais lógica e tempo, já que conta com filtros, ordenação e uma caixa de diálogo que abre ao se clicar num dos cards. Outro detalhe aqui é que resolvi puxar os dados de alguns vídeos do canal da Leadster. Assim, busquei os dados na API do Youtube, salvei num arquivo JSON, extraí (através de uma função) apenas os dados necessários para a aplicação e assim pude gerar na tela 40 cards com imagens, textos e vídeos diferentes;
+- No footer segui basicamente o layout modelo com a adição de todos os links reais da Leadster. Os links também foram salvos em um arquivo no formato JSON na pasta /src/db.
 
 #### 2. Como organizei meu código:
 
@@ -70,7 +70,11 @@ Além da pasta public (nativa do Next.js) que utilizei para salvar as imagens e 
 
 - Pasta **/src**
   <br />
-  ![Tree](https://imgur.com/KL0TpLL.png)
+  ![Src](https://imgur.com/FTP4jLD.png)
+
+- Pasta **/public**
+  <br />
+  ![Public](https://imgur.com/VTF5jsq.png)
 
 É importante ressaltar aqui que os componentes que criei servem a três propósitos: organização, reusabilidade e extensibilidade. Optei também por utilizar Context para que tanto a consulta quanto a edição desse estado global pudesse estar disponível para toda a aplicação. Por fim, o uso de types (na pasta types) se fez necessário para garantir a integridade de toda a aplicação, já que os dados passados aos componentes e funções estão todos devidamente tipados.
 
@@ -94,6 +98,18 @@ Porém, caso queira fazer o download do repositório para sua máquina e execut�
   ```
 - Por último, você só precisa digitar http://localhost:3000 na barra de endereços do seu navegador e confirmar! Pronto!
 
+## Responsividade
+
+Para deixar a aplicação responsiva para diversos tamanhos e tipos de dispositivos segui as seguintes faixas de pixels e suas respectivas nomenclaturas:
+- Phone: 0 a 599px;
+- Tablet Portrait: 600 a 899px;
+- Tablet Landscape: 900 a 1199px;
+- Desktop: 1200 a 1799px;
+- Big desktop: a partir de 1800px.
+
+  Todas as estilizações foram realizadas utilizando as configurações do Tailwind inseridas na propriedade className das tags.
+  Outro detalhe é que através da função calculateVideosPerPage (/src/utils) é possível calcular uma quantidade de cards de vídeo ideal para cada tamanho de tela, indo de 6 (para smartphones) até 12 (para telas com mais de 1800px de comprimento).
+  
 ## Testes SonarCloud
 
 Submeti meu repositório a plataforma do SonarCloud para garantir que ela estivesse sólida em termos de bugs, segurança e performance.
