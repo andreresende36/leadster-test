@@ -109,7 +109,17 @@ Para deixar a aplicação responsiva para diversos tamanhos e tipos de dispositi
 
   Todas as estilizações foram realizadas utilizando as configurações do Tailwind inseridas na propriedade className das tags.
   Outro detalhe é que através da função calculateVideosPerPage (/src/utils) é possível calcular uma quantidade de cards de vídeo ideal para cada tamanho de tela, indo de 6 (para smartphones) até 12 (para telas com mais de 1800px de comprimento).
-  
+
+## SEO
+
+Para configurações de SEO e um consequente melhor ranqueamento em sites de busca, utilizei um checker online chamado Sitechecker (https://sitechecker.pro/).  A partir do Score retornado e dos alertas gerados pude realizar algumas alterações na aplicação a fim de melhor o SEO, como:
+- Inclusão de uma tag <title>;
+- Utilização de headings (h1 até h6);
+- Inclusão de uma Meta Description;
+- Inclusão de um Canonical Link, para evitar problemas de duplicação de conteúdo;
+- Inclusão do arquivo robots.txt na pasta public para indicar aos robôs dos mecanismos de busca quais as páginas da aplicação que eles podem ou não ter acesso;
+- Inclusão de um arquivo sitemap.xml na pasta public que fornece aos mecanismos de busca um mapa do site. 
+
 ## Testes SonarCloud
 
 Submeti meu repositório a plataforma do SonarCloud para garantir que ela estivesse sólida em termos de bugs, segurança e performance.
